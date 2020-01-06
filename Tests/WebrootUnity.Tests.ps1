@@ -5,7 +5,7 @@ if($env:APPVEYOR_REPO_BRANCH -and $env:APPVEYOR_REPO_BRANCH -notlike "master")
 }
 
 $PSVersion = $PSVersionTable.PSVersion.Major
-Import-Module $PSScriptRoot\..\WebrootUnity -Force
+Import-Module $PSScriptRoot\..\WebrootUnity\WebrootUnity.psm1 -Force
 
 #Integration test example
 Describe "Get-WebrootHealthCheckVersion  PS$PSVersion Integrations tests" {
