@@ -10,7 +10,6 @@ function Convert-WebrootConsoleGSMSite {
 
     $url = "https://unityapi.webrootcloudav.com/service/api/console/access/gsm/$($GSMKey)/sites/$($SiteID)/converttrial"
     
-    Write-Verbose "Connecting"
     Connect-WebrootUnity
             
     try{

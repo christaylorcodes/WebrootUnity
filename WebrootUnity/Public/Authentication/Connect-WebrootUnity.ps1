@@ -1,11 +1,17 @@
-Function Connect-WebrootUnity {
+﻿Function Connect-WebrootUnity {
     [CmdletBinding()]
     param(
+        [Parameter(Mandatory=$true, ParameterSetName = 'New')]
         [string]$client_id,
+        [Parameter(Mandatory=$true, ParameterSetName = 'New')]
         [string]$client_secret,
-        [string]$username,
-        [string]$password,
+        [Parameter(Mandatory=$true, ParameterSetName = 'New')]
+        [pscredential]$credentials,
+        [Parameter(ParameterSetName = 'New')]
+        [Parameter(ParameterSetName = 'ReNew')]
         [string]$scope = '*',
+        [Parameter(ParameterSetName = 'New')]
+        [Parameter(ParameterSetName = 'ReNew')]
         [Switch]$force
     )
 
@@ -15,16 +21,16 @@ Function Connect-WebrootUnity {
     $configDir = "$Env:AppData\WindowsPowerShell\Modules\WebrootUnity\0.1\Config.ps1xml"
     
     #If paramater was passed use as new token request
-    if($client_id -or $client_secret -or $username -or $password){
+    if($PSCmdlet.ParameterSetName -eq 'New'){
         Write-Verbose "Paramaters passed, creating new request."
-        Get-WebrootAuthToken -client_id $client_id -client_secret $client_secret -username $username -password $password -scope $scope
+        Get-WebrootAuthToken -client_id $client_id -client_secret $client_secret -credentials $credentials -scope $scope
     }
     #No paramaters where passed use variable or config.
     else{
         #If there is no variable but a config file load
         if(!$WebrootAuthToken -and (Test-Path $configDir) -and !$Force){
             try {
-                $global:WebrootAuthToken = Import-Clixml -Path $configDir -ErrorAction STOP
+                $script:WebrootAuthToken = Import-Clixml -Path $configDir -ErrorAction STOP
                 if(!$WebrootAuthToken){
                     stop
                 }
@@ -44,7 +50,7 @@ Function Connect-WebrootUnity {
             }
             #Request a new Token
             else{
-                Get-WebrootAuthToken -client_id $WebrootAuthToken.client_id -client_secret $WebrootAuthToken.client_secret -username $WebrootAuthToken.username -password $WebrootAuthToken.password
+                Get-WebrootAuthToken -client_id $WebrootAuthToken.client_id -client_secret $WebrootAuthToken.client_secret -credentials $credentials
             }
           
         }

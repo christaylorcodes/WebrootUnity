@@ -1,7 +1,7 @@
 function Set-WebrootConsoleGSMSiteUser {
     #https://unityapi.webrootcloudav.com/Docs/APIDoc/Api/PUT-api-console-gsm-gsmKey-sites-siteId-admins
     #Can accept a csv of user ID's but only one access level
-    [CmdletBinding()]
+    [CmdletBinding(SupportsShouldProcess, ConfirmImpact='Medium')]
     param(
         [Parameter(Mandatory=$True)]
         [string]$GSMKey,
@@ -23,14 +23,18 @@ function Set-WebrootConsoleGSMSiteUser {
     }
 
     $List = foreach($ID in $UserID){
-        $object = New-Object -TypeName PSObject
-        $object | Add-Member -MemberType NoteProperty -Name UserId -Value $ID
-        $object | Add-Member -MemberType NoteProperty -Name AccessLevel -Value $AccessLevel
-        Write-Output $object
+        [PSCustomObject]@{
+            UserId = $ID
+            AccessLevel = $AccessLevel
+        }
     }
 
+    $Body = @{
+        Admins = $List
+    }
+    $Body = $Body | ConvertTo-Json
+    <#
     $List = $(($List | ConvertTo-Json).trim('[]'))
-
     $Body = @"
 {
     'Admins': [
@@ -38,15 +42,17 @@ function Set-WebrootConsoleGSMSiteUser {
     ]
 }
 "@
+    #>
 
-    Write-Verbose 'Connecting'
-    Connect-WebrootUnity
-            
-    try{
-        Invoke-RestMethod -Method Put -Uri $url -ContentType "application/json" -Body $Body -Headers @{"Authorization" = "Bearer $($WebrootAuthToken.access_token)"}
+    if ($PSCmdlet.ShouldProcess($WebRequestArguments.URI, "Invoke-RestMethod, with body:`r`n$Body`r`n")) {
+        Connect-WebrootUnity
+        Write-Verbose $Body
+        
+        try{
+            Invoke-RestMethod -Method Put -Uri $url -ContentType "application/json" -Body $Body -Headers @{"Authorization" = "Bearer $($WebrootAuthToken.access_token)"}
+        }
+        catch{
+            Write-Error "Error: $($Error[0])"
+        }
     }
-    catch{
-        Write-Error "Error: $($Error[0])"
-    }
-    
 }

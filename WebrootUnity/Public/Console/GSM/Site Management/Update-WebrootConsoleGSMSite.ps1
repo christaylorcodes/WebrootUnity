@@ -1,6 +1,6 @@
 function Update-WebrootConsoleGSMSite {
     #https://unityapi.webrootcloudav.com/Docs/APIDoc/Api/PUT-api-console-gsm-gsmKey-sites-siteId
-    [CmdletBinding()]
+    [CmdletBinding(SupportsShouldProcess, ConfirmImpact='Medium')]
     param(
         [Parameter(Mandatory=$True)]
         [string]$GSMKey,
@@ -36,14 +36,15 @@ function Update-WebrootConsoleGSMSite {
     $Body = $Body | ConvertTo-Json
 
 
-    Write-Verbose "Connecting"
-    Connect-WebrootUnity
+    if ($PSCmdlet.ShouldProcess($WebRequestArguments.URI, "Invoke-RestMethod, with body:`r`n$Body`r`n")) {
+        Connect-WebrootUnity
+        Write-Verbose $Body
             
-    try{
-        Invoke-RestMethod -Method Put -Uri $url -ContentType "application/json" -Body $Body -Headers @{"Authorization" = "Bearer $($WebrootAuthToken.access_token)"}
+        try{
+            Invoke-RestMethod -Method Put -Uri $url -ContentType "application/json" -Body $Body -Headers @{"Authorization" = "Bearer $($WebrootAuthToken.access_token)"}
+        }
+        catch{
+            Write-Error "Error: $($Error[0])"
+        }
     }
-    catch{
-        Write-Error "Error: $($Error[0])"
-    }
-    
 }

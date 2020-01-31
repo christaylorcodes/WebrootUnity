@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-WebrootConsoleGSMSiteList
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Weill return a list of GSM sites
 
 ## SYNTAX
 
@@ -22,16 +22,16 @@ Get-WebrootConsoleGSMSiteList [-GSMKey] <Object> [<CommonParameters>]
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> Get-WebrootConsoleGSMSiteList -gsmkey $ParentKeyCode
 ```
 
-{{ Add example description here }}
+Will list all GSM sites.
 
 ## PARAMETERS
 
 ### -GSMKey
-{{ Fill GSMKey Description }}
+Found in the web console under AccountSettings, Account Information.
 
 ```yaml
 Type: Object
@@ -51,7 +51,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### System.Object

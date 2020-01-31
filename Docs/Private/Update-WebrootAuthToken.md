@@ -1,6 +1,6 @@
 ---
-external help file: WebrootUnity-help.xml
-Module Name: WebrootUnity
+external help file:
+Module Name:
 online version:
 schema: 2.0.0
 ---
@@ -14,7 +14,7 @@ schema: 2.0.0
 
 ```
 Update-WebrootAuthToken [-client_id] <String> [-client_secret] <String> [[-refresh_token] <String>]
- [[-scope] <String>] [<CommonParameters>]
+ [[-scope] <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,6 +30,36 @@ PS C:\> {{ Add example code here }}
 {{ Add example description here }}
 
 ## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -client_id
 {{ Fill client_id Description }}

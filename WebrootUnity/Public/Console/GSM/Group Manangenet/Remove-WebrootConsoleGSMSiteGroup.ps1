@@ -1,6 +1,6 @@
 function Remove-WebrootConsoleGSMSiteGroup {
     #https://unityapi.webrootcloudav.com/Docs/APIDoc/Api/DELETE-api-console-gsm-gsmKey-sites-siteId-groups-groupId_newGroupId
-    [CmdletBinding()]
+    [CmdletBinding(SupportsShouldProcess, ConfirmImpact='Medium')]
     param(
         [Parameter(Mandatory=$True)]
         [string]$GSMKey,
@@ -13,14 +13,14 @@ function Remove-WebrootConsoleGSMSiteGroup {
 
     $url = "https://unityapi.webrootcloudav.com/service/api/console/gsm/$($GSMKey)/sites/$($SiteID)/groups/$($GroupID)?newGroupId=$($NewGroupID)"
     
-    Write-Verbose "Connecting"
-    Connect-WebrootUnity
+    if ($PSCmdlet.ShouldProcess($WebRequestArguments.URI, "Invoke-RestMethod, with Site: $SiteID and Group: $GroupID")) {
+        Connect-WebrootUnity
             
-    try{
-        Invoke-RestMethod -Method Delete -Uri $url -ContentType "application/json" -Headers @{"Authorization" = "Bearer $($WebrootAuthToken.access_token)"}
+        try{
+            Invoke-RestMethod -Method Delete -Uri $url -ContentType "application/json" -Headers @{"Authorization" = "Bearer $($WebrootAuthToken.access_token)"}
+        }
+        catch{
+            Write-Error "Error: $($Error[0])"
+        }
     }
-    catch{
-        Write-Error "Error: $($Error[0])"
-    }
-    
 }

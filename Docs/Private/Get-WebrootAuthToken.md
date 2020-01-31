@@ -1,11 +1,11 @@
 ---
-external help file: WebrootUnity-help.xml
-Module Name: WebrootUnity
+external help file:
+Module Name:
 online version:
 schema: 2.0.0
 ---
 
-# Get-WebrootConsoleGSMSiteGroup
+# Get-WebrootAuthToken
 
 ## SYNOPSIS
 {{ Fill in the Synopsis }}
@@ -13,7 +13,8 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-Get-WebrootConsoleGSMSiteGroup [-GSMKey] <Object> [-SiteID] <Object> [-GroupID] <Object> [<CommonParameters>]
+Get-WebrootAuthToken [-client_id] <String> [-client_secret] <String> [-credentials] <PSCredential>
+ [[-scope] <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -22,7 +23,7 @@ Get-WebrootConsoleGSMSiteGroup [-GSMKey] <Object> [-SiteID] <Object> [-GroupID] 
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 PS C:\> {{ Add example code here }}
 ```
 
@@ -30,11 +31,11 @@ PS C:\> {{ Add example code here }}
 
 ## PARAMETERS
 
-### -GSMKey
-{{ Fill GSMKey Description }}
+### -client_id
+{{ Fill client_id Description }}
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -45,11 +46,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -GroupID
-{{ Fill GroupID Description }}
+### -client_secret
+{{ Fill client_secret Description }}
 
 ```yaml
-Type: Object
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -credentials
+{{ Fill credentials Description }}
+
+```yaml
+Type: PSCredential
 Parameter Sets: (All)
 Aliases:
 
@@ -60,16 +76,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SiteID
-{{ Fill SiteID Description }}
+### -scope
+{{ Fill scope Description }}
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: True
-Position: 1
+Required: False
+Position: 3
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -81,6 +97,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
+
 ## OUTPUTS
 
 ### System.Object

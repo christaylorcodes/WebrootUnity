@@ -1,4 +1,4 @@
-function Deactivate-WebrootConsoleGSMEndpoint {
+function Disable-WebrootConsoleGSMEndpoint {
     #https://unityapi.webrootcloudav.com/Docs/APIDoc/Api/POST-api-console-gsm-gsmKey-sites-siteId-endpoints-deactivate
     [CmdletBinding()]
     param(
@@ -14,7 +14,6 @@ function Deactivate-WebrootConsoleGSMEndpoint {
     $Body = @{EndpointsList=$EndpointsList;}
     $Body = $Body | ConvertTo-Json
 
-    Write-Verbose "Connecting"
     Connect-WebrootUnity
             
     try{

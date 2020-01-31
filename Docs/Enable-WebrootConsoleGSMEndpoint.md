@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 ---
 
-# Get-WebrootConsoleGSMSiteGroup
+# Enable-WebrootConsoleGSMEndpoint
 
 ## SYNOPSIS
 {{ Fill in the Synopsis }}
@@ -13,7 +13,8 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-Get-WebrootConsoleGSMSiteGroup [-GSMKey] <Object> [-SiteID] <Object> [-GroupID] <Object> [<CommonParameters>]
+Enable-WebrootConsoleGSMEndpoint [-GSMKey] <String> [-SiteID] <String> [[-EndpointsList] <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -22,7 +23,7 @@ Get-WebrootConsoleGSMSiteGroup [-GSMKey] <Object> [-SiteID] <Object> [-GroupID] 
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 PS C:\> {{ Add example code here }}
 ```
 
@@ -30,11 +31,26 @@ PS C:\> {{ Add example code here }}
 
 ## PARAMETERS
 
+### -EndpointsList
+{{ Fill EndpointsList Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -GSMKey
 {{ Fill GSMKey Description }}
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -45,26 +61,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -GroupID
-{{ Fill GroupID Description }}
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -SiteID
 {{ Fill SiteID Description }}
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -81,6 +82,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
+
 ## OUTPUTS
 
 ### System.Object

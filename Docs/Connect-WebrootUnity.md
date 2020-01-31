@@ -8,38 +8,44 @@ schema: 2.0.0
 # Connect-WebrootUnity
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+This will connect you to the Webroot Unity API.
 
 ## SYNTAX
 
+### New
 ```
-Connect-WebrootUnity [[-client_id] <String>] [[-client_secret] <String>] [[-username] <String>]
- [[-password] <String>] [[-scope] <String>] [-force] [<CommonParameters>]
+Connect-WebrootUnity [-client_id] <String> [-client_secret] <String> -credentials <PSCredential>
+ [[-scope] <String>] [-force] [<CommonParameters>]
+```
+
+### ReNew
+```
+Connect-WebrootUnity [[-scope] <String>] [-force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+This handle all the authentication for the module.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+Connect-WebrootUnity -client_id 'client_123' -client_secret 'penguin' -credentials Get-Credential
 ```
 
-{{ Add example description here }}
+This is will attempt to connect the Unity API.
 
 ## PARAMETERS
 
 ### -client_id
-{{ Fill client_id Description }}
+Generated from GSM Settings, [API Access](https://my.webrootanywhere.com/gsm.aspx#page_tab_account_apiaccess)
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: New
 Aliases:
 
-Required: False
+Required: True
 Position: 0
 Default value: None
 Accept pipeline input: False
@@ -47,14 +53,14 @@ Accept wildcard characters: False
 ```
 
 ### -client_secret
-{{ Fill client_secret Description }}
+Generated from GSM Settings, [API Access](https://my.webrootanywhere.com/gsm.aspx#page_tab_account_apiaccess)
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: New
 Aliases:
 
-Required: False
+Required: True
 Position: 1
 Default value: None
 Accept pipeline input: False
@@ -62,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -force
-{{ Fill force Description }}
+Overwrite cached information
 
 ```yaml
 Type: SwitchParameter
@@ -71,22 +77,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -password
-{{ Fill password Description }}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 3
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -106,16 +97,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -username
-{{ Fill username Description }}
+### -credentials
+[PSCredential] object with your GSM user name and password.
 
 ```yaml
-Type: String
-Parameter Sets: (All)
+Type: PSCredential
+Parameter Sets: New
 Aliases:
 
-Required: False
-Position: 2
+Required: True
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -127,10 +118,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### System.Object
 ## NOTES
 
 ## RELATED LINKS
+
+[Get Access Token](https://unityapi.webrootcloudav.com/Docs/en/APIDoc/GettingStarted#gettingStarted-acquireCredentials)

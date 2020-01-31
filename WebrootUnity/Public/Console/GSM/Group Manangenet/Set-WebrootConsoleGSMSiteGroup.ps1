@@ -1,6 +1,6 @@
 function Set-WebrootConsoleGSMSiteGroup {
     #https://unityapi.webrootcloudav.com/Docs/APIDoc/Api/POST-api-console-gsm-gsmKey-sites-siteId-groups
-    [CmdletBinding()]
+    [CmdletBinding(SupportsShouldProcess, ConfirmImpact='Medium')]
     param(
         [Parameter(Mandatory=$True)]
         [string]$GSMKey,
@@ -29,14 +29,15 @@ function Set-WebrootConsoleGSMSiteGroup {
                 PolicyID=$PolicyID;}
     $Body = $Body | ConvertTo-Json
 
-    Write-Verbose "Connecting"
-    Connect-WebrootUnity
+    if ($PSCmdlet.ShouldProcess($WebRequestArguments.URI, "Invoke-RestMethod, with body:`r`n$Body`r`n")) {
+        Connect-WebrootUnity
+        Write-Verbose $Body
             
-    try{
-        Invoke-RestMethod -Method Put -Uri $url -ContentType "application/json" -Body $Body -Headers @{"Authorization" = "Bearer $($WebrootAuthToken.access_token)"}
+        try{
+            Invoke-RestMethod -Method Put -Uri $url -ContentType "application/json" -Body $Body -Headers @{"Authorization" = "Bearer $($WebrootAuthToken.access_token)"}
+        }
+        catch{
+            Write-Error "Error: $($Error[0])"
+        }
     }
-    catch{
-        Write-Error "Error: $($Error[0])"
-    }
-    
 }

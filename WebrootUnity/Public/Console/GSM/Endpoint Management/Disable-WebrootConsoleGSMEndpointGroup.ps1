@@ -1,4 +1,4 @@
-function Deactivate-WebrootConsoleGSMEndpointGroup {
+function Disable-WebrootConsoleGSMEndpointGroup {
     #https://unityapi.webrootcloudav.com/Docs/APIDoc/Api/POST-api-console-gsm-gsmKey-sites-siteId-groups-groupId-endpoints-deactivate
     [CmdletBinding()]
     param(
@@ -12,7 +12,6 @@ function Deactivate-WebrootConsoleGSMEndpointGroup {
 
     $url = "https://unityapi.webrootcloudav.com/service/api/console/gsm/$($GSMKey)/sites/$($SiteID)/groups/$($GroupID)/endpoints/deactivate"    
 
-    Write-Verbose "Connecting"
     Connect-WebrootUnity
             
     try{

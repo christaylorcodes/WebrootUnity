@@ -1,4 +1,4 @@
-function Reactivate-WebrootConsoleGSMEndpoint {
+function Enable-WebrootConsoleGSMEndpoint {
     #https://unityapi.webrootcloudav.com/Docs/APIDoc/Api/POST-api-console-gsm-gsmKey-sites-siteId-endpoints-reactivate
     [CmdletBinding()]
     param(
@@ -14,7 +14,6 @@ function Reactivate-WebrootConsoleGSMEndpoint {
     $Body = @{EndpointsList=$EndpointsList;}
     $Body = $Body | ConvertTo-Json
 
-    Write-Verbose "Connecting"
     Connect-WebrootUnity
             
     try{

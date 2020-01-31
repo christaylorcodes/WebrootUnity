@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 ---
 
-# Get-WebrootConsoleGSMSiteGroup
+# Disable-WebrootConsoleGSMEndpointGroup
 
 ## SYNOPSIS
 {{ Fill in the Synopsis }}
@@ -13,7 +13,8 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-Get-WebrootConsoleGSMSiteGroup [-GSMKey] <Object> [-SiteID] <Object> [-GroupID] <Object> [<CommonParameters>]
+Disable-WebrootConsoleGSMEndpointGroup [-GSMKey] <String> [-SiteID] <String> [-GroupID] <String>
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -22,7 +23,7 @@ Get-WebrootConsoleGSMSiteGroup [-GSMKey] <Object> [-SiteID] <Object> [-GroupID] 
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 PS C:\> {{ Add example code here }}
 ```
 
@@ -34,7 +35,7 @@ PS C:\> {{ Add example code here }}
 {{ Fill GSMKey Description }}
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -49,7 +50,7 @@ Accept wildcard characters: False
 {{ Fill GroupID Description }}
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -64,7 +65,7 @@ Accept wildcard characters: False
 {{ Fill SiteID Description }}
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -81,6 +82,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
+
 ## OUTPUTS
 
 ### System.Object
