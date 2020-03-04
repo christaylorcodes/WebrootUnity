@@ -1,4 +1,6 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/so4anml73ut5cjnp?svg=true)](https://ci.appveyor.com/project/christaylorcodes/webrootunity)
+[![Gallery](https://img.shields.io/powershellgallery/v/WebrootUnity?label=PS%20Gallery&logo=powershell&logoColor=white)](https://www.powershellgallery.com/packages/WebrootUnity)
+
 ![Webroot](https://www-cdn.webroot.com/9614/7500/7505/brand-page-webroot-secureanywhere-logo-green.png)
 
 ## This is a PowerShell wrapper for the [Webroot Unity REST API](https://unityapi.webrootcloudav.com/Docs/en/APIDoc). 

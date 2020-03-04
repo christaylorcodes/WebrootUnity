@@ -4,33 +4,32 @@
 
 The following is a set of guidelines for contributing. These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to this document, or anything else in a pull request.
 
-#### Table Of Contents
+## Table Of Contents
 
 [I don't want to read this whole thing, I just have a question!!!](#i-don't-want-to-read-this-whole-thing-i-just-have-a-question)
 
 [How Can I Contribute?](#how-can-i-contribute)
-  * [Reporting Bugs](#reporting-bugs)
-  * [Suggesting Enhancements](#suggesting-enhancements)
-  * [Your First Code Contribution](#your-first-code-contribution)
-  * [Pull Requests](#pull-requests)
+* [Reporting Bugs](#reporting-bugs)
+* [Suggesting Enhancements](#suggesting-enhancements)
+* [Your First Code Contribution](#your-first-code-contribution)
+* [Pull Requests](#pull-requests)
+* [Styleguides](#styleguides)
+* [Git Commit Messages](#git-commit-messages)
+* [Powershell Styleguide](#powershell-styleguide)
+* [Documentation Styleguide](#documentation-styleguide)
 
-[Styleguides](#styleguides)
-  * [Git Commit Messages](#git-commit-messages)
-  * [Powershell Styleguide](#powershell-styleguide)
-  * [Documentation Styleguide](#documentation-styleguide)
+## I don't want to read this whole thing I just have a question
 
-## I don't want to read this whole thing I just have a question!!!
-
-> **Note:** _*Please don't file an issue to ask a question.*_ You'll get faster results by using the resources below.
+> **Note:** _Please don't file an issue to ask a question._ You'll get faster results by using the resources below.
 
 Join the MSPGeek Slack team:
 
 * [Join the MSPGeek Slack Team](https://join.mspgeek.com/)
-    * Even though Slack is a chat service, sometimes it takes several hours for community members to respond &mdash; please be patient!
-    * Use the `#v-webroot` channel for general questions or discussion
-    * There are many other channels available, check the channel list
+* Even though Slack is a chat service, sometimes it takes several hours for community members to respond please be patient!
+* Use the `#v-webroot` channel for general questions or discussion
+* There are many other channels available, check the channel list
 
-## How Can I Contribute?
+## How Can I Contribute
 
 ### Reporting Bugs
 
@@ -42,10 +41,10 @@ Before creating bug reports, please check existing issues as you might find out 
 
 #### Before Submitting A Bug Report
 
-* **Check the Wiki.** You might be able to find the cause of the problem and fix things yourself. 
-* **Check the [MSPGeek Slack Team](https://join.mspgeek.com/)** for help from the community.
+  * **Check the Wiki.** You might be able to find the cause of the problem and fix things yourself. 
+  * **Check the [MSPGeek Slack Team](https://join.mspgeek.com/)** for help from the community.
 
-#### How Do I Submit A (Good) Bug Report?
+#### How Do I Submit A (Good) Bug Report
 
 Bugs are tracked as [GitHub issues](https://guides.github.com/features/issues/). After you've determined which repository your bug is related to, create an issue on that repository and provide the following information by filling in the template.
 
@@ -73,31 +72,31 @@ Before creating enhancement suggestions, please check existing suggestions as yo
 
 #### Before Submitting An Enhancement Suggestion
 
-* **Check the [Wiki]()** for tips — you might discover that the enhancement is already available.
-* **Check if there's already [a package]() which provides that enhancement.**
+  * **Check the [Wiki]()** for tips — you might discover that the enhancement is already available.
+  * **Check if there's already [a package]() which provides that enhancement.**
 
-#### How Do I Submit A (Good) Enhancement Suggestion?
+#### How Do I Submit A (Good) Enhancement Suggestion
 
 Enhancement suggestions are tracked as [GitHub issues](https://guides.github.com/features/issues/).Create an issue and provide the following information:
 
-* **Use a clear and descriptive title** for the issue to identify the suggestion.
-* **Provide a step-by-step description of the suggested enhancement** in as many details as possible.
-* **Provide specific examples to demonstrate the steps**. Include copy/pasteable snippets which you use in those examples, as [Markdown code blocks](https://help.github.com/articles/markdown-basics/#multiple-lines).
-* **Describe the current behavior** and **explain which behavior you expected to see instead** and why.
-* **Explain why this enhancement would be useful** to most users and isn't something that can or should be implemented as a [community package]().
-* **List some other text examples where this enhancement exists.**
-* **Specify the name and version of the OS you're using.**
+  * **Use a clear and descriptive title** for the issue to identify the suggestion.
+  * **Provide a step-by-step description of the suggested enhancement** in as many details as possible.
+  * **Provide specific examples to demonstrate the steps**. Include copy/pasteable snippets which you use in those examples, as [Markdown   code blocks](https://help.github.com/articles/markdown-basics/#multiple-lines).
+  * **Describe the current behavior** and **explain which behavior you expected to see instead** and why.
+  * **Explain why this enhancement would be useful** to most users and isn't something that can or should be implemented as a [community   package]().
+  * **List some other text examples where this enhancement exists.**
+  * **Specify the name and version of the OS you're using.**
 
 ## Styleguides
 
 ### Git Commit Messages
 
-* Use the present tense ("Add feature" not "Added feature")
-* Use the imperative mood ("Move cursor to..." not "Moves cursor to...")
-* Limit the first line to 72 characters or less
-* Reference issues and pull requests liberally after the first line
-* When only changing documentation, include `[ci skip]` in the commit title
-* Consider starting the commit message with an applicable emoji:
+  * Use the present tense ("Add feature" not "Added feature")
+  * Use the imperative mood ("Move cursor to..." not "Moves cursor to...")
+  * Limit the first line to 72 characters or less
+  * Reference issues and pull requests liberally after the first line
+  * When only changing documentation, include `[ci skip]` in the commit title
+  * Consider starting the commit message with an applicable emoji:
     * :art: `:art:` when improving the format/structure of the code
     * :racehorse: `:racehorse:` when improving performance
     * :non-potable_water: `:non-potable_water:` when plugging memory leaks
