@@ -94,10 +94,15 @@ Enhancement suggestions are tracked as [GitHub issues](https://guides.github.com
 ### Git Commit Messages
 
 -   Use the present tense ("Add feature" not "Added feature")
+
 -   Use the imperative mood ("Move cursor to..." not "Moves cursor to...")
+
 -   Limit the first line to 72 characters or less
+
 -   Reference issues and pull requests liberally after the first line
+
 -   When only changing documentation, include `[ci skip]` in the commit title
+
 -   Consider starting the commit message with an applicable emoji:
     -   :art: `:art:` when improving the format/structure of the code
     -   :racehorse: `:racehorse:` when improving performance
