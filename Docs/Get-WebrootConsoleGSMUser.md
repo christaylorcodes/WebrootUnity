@@ -22,7 +22,7 @@ Get-WebrootConsoleGSMUser [-GSMKey] <Object> [-UserID] <Object> [<CommonParamete
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 PS C:\> {{ Add example code here }}
 ```
 

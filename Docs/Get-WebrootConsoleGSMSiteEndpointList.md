@@ -24,7 +24,7 @@ Get-WebrootConsoleGSMSiteEndpointList [-GSMKey] <String> [-SiteId] <String> [[-t
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 PS C:\> {{ Add example code here }}
 ```
 

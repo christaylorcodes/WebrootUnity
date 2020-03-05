@@ -22,7 +22,7 @@ Get-WebrootConsoleGSMSite [-GSMKey] <Object> [[-SiteID] <Object>] [<CommonParame
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 PS C:\> {{ Add example code here }}
 ```
 

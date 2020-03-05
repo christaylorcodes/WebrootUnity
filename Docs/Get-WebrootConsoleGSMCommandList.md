@@ -25,7 +25,7 @@ Get-WebrootConsoleGSMCommandList [-GSMKey] <String> [-SiteId] <String> [[-endpoi
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 PS C:\> {{ Add example code here }}
 ```
 

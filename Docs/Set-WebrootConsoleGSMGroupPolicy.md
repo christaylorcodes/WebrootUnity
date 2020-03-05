@@ -23,7 +23,7 @@ Set-WebrootConsoleGSMGroupPolicy [-GSMKey] <String> [-SiteID] <String> [-GroupID
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 PS C:\> {{ Add example code here }}
 ```
 

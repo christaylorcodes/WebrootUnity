@@ -23,7 +23,7 @@ Set-WebrootConsoleGSMEndpointPolicy [-GSMKey] <String> [-SiteID] <String> [[-End
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 PS C:\> {{ Add example code here }}
 ```
 

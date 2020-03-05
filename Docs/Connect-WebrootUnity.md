@@ -29,7 +29,7 @@ This handle all the authentication for the module.
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Connect-WebrootUnity -client_id 'client_123' -client_secret 'penguin' -credentials Get-Credential
 ```
 

@@ -22,7 +22,7 @@ Get-WebrootConsoleGSMSiteUserList [-GSMKey] <Object> [-SiteID] <Object> [<Common
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 PS C:\> {{ Add example code here }}
 ```
 

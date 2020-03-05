@@ -22,7 +22,7 @@ Get-WebrootConsoleGSMSiteList [-GSMKey] <Object> [<CommonParameters>]
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 PS C:\> Get-WebrootConsoleGSMSiteList -gsmkey $ParentKeyCode
 ```
 

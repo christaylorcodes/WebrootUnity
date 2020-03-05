@@ -23,7 +23,7 @@ Set-WebrootConsoleGSMSiteUser [-GSMKey] <String> [-SiteID] <String> [-UserID] <S
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 PS C:\> {{ Add example code here }}
 ```
 

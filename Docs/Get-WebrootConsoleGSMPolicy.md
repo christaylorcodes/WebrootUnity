@@ -22,7 +22,7 @@ Get-WebrootConsoleGSMPolicy [-GSMKey] <Object> [-PolicyID] <Object> [<CommonPara
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 PS C:\> {{ Add example code here }}
 ```
 
