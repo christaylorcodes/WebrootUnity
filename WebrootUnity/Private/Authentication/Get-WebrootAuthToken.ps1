@@ -8,7 +8,7 @@
         [string]$client_secret,
         [Parameter(Mandatory=$True)]
         [pscredential]$credentials,
-        [string]$scope = '*'    
+        [string]$scope = '*'
     )
 
     $url = 'https://unityapi.webrootcloudav.com/auth/token'

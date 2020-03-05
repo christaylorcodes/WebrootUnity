@@ -4,12 +4,12 @@ function Get-WebrootHealthCheckVersion {
     param()
 
     $url = "https://unityapi.webrootcloudav.com/service/api/health/version"
-                
+
     try{
         $obj = Invoke-RestMethod -Method Get -Uri $url -ContentType "application/json"
         $obj.ServiceInformation
     }
     catch{
         Write-Error "Error: $($Error[0])"
-    }    
+    }
 }

@@ -19,7 +19,7 @@
 
     #Config file to save token info to
     $configDir = "$Env:AppData\WindowsPowerShell\Modules\WebrootUnity\0.1\Config.ps1xml"
-    
+
     #If paramater was passed use as new token request
     if($PSCmdlet.ParameterSetName -eq 'New'){
         Write-Verbose "Paramaters passed, creating new request."
@@ -46,19 +46,19 @@
         if($WebrootAuthToken.expires -lt (Get-Date) -or !$WebrootAuthToken -or $Force){
             #If it can be renewed and not forced do so
             if($WebrootAuthToken.Renewable -gt (Get-Date) -and !$Force){
-                Update-WebrootAuthToken -client_id $WebrootAuthToken.client_id -client_secret $WebrootAuthToken.client_secret -refresh_token $WebrootAuthToken.refresh_token     
+                Update-WebrootAuthToken -client_id $WebrootAuthToken.client_id -client_secret $WebrootAuthToken.client_secret -refresh_token $WebrootAuthToken.refresh_token
             }
             #Request a new Token
             else{
                 Get-WebrootAuthToken -client_id $WebrootAuthToken.client_id -client_secret $WebrootAuthToken.client_secret -credentials $credentials
             }
-          
+
         }
         else{
             Write-Verbose "Token still valid."
         }
 
-    }    
+    }
 
     #Create config file if not present.
     if (-not (Test-Path $configDir)){

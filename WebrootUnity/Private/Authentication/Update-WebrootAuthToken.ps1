@@ -5,9 +5,9 @@
         [Parameter(Mandatory=$True)]
         [string]$client_id,
         [Parameter(Mandatory=$True)]
-        [string]$client_secret,        
+        [string]$client_secret,
         [string]$refresh_token = $WebrootAuthToken.refresh_token,
-        [string]$scope = '*'    
+        [string]$scope = '*'
     )
 
     $url = 'https://unityapi.webrootcloudav.com/auth/token'
@@ -17,7 +17,7 @@
         grant_type      = 'refresh_token'
         scope           = $scope
     }
-    
+
     if ($PSCmdlet.ShouldProcess($WebRequestArguments.URI, "Invoke-RestMethod, with body:`r`n$Body`r`n")) {
         Write-Verbose $Body
 

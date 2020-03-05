@@ -9,12 +9,12 @@ Import-Module $PSScriptRoot\..\WebrootUnity\WebrootUnity.psm1 -Force
 
 Describe "Get-WebrootHealthCheckVersion  PS$PSVersion Integrations tests" {
 
-    Context 'Strict mode' { 
+    Context 'Strict mode' {
 
         Set-StrictMode -Version latest
 
         It 'should get valid data' {
-            $Output = Get-WebrootHealthCheckVersion 
+            $Output = Get-WebrootHealthCheckVersion
             $Output.Name -eq 'Webroot.UnityAPI.APIServer'
             $Output.Version | Should -Be '1.0.0.0'
         }
@@ -23,7 +23,7 @@ Describe "Get-WebrootHealthCheckVersion  PS$PSVersion Integrations tests" {
 
 Describe "Connect-WebrootUnity  PS$PSVersion Integrations tests" {
 
-    Context 'Strict mode' { 
+    Context 'Strict mode' {
 
         Set-StrictMode -Version latest
         It 'should connect' {

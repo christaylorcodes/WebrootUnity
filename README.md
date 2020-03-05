@@ -24,7 +24,7 @@ Want to share something you created using the module? Submit it to be featured a
 
 ## [Donating](https://paypal.me/ChrisTaylorCodes)
 
-If you cant take time to contribute maybe you would like to help in other ways. 
+If you cant take time to contribute maybe you would like to help in other ways.
 
 It takes time to maintain this project. Does the time spent on this module help you do cool things? Is that time worth a beer or two?
 

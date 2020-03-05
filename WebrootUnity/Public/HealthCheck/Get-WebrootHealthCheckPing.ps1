@@ -4,12 +4,12 @@ function Get-WebrootHealthCheckPing {
     param()
 
     $url = "https://unityapi.webrootcloudav.com/service/api/health/ping"
-            
+
     try{
         Invoke-RestMethod -Method Get -Uri $url -ContentType "application/json"
         Write-Output 'Success'
     }
     catch{
         Write-Error "Error: $($Error[0])"
-    }    
+    }
 }
