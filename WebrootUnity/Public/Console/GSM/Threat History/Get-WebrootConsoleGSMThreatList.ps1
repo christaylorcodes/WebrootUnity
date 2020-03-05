@@ -11,20 +11,20 @@ function Get-WebrootConsoleGSMThreatList {
         [string]$returnedInfo,
         [int]$pageSize,
         [int]$pageNr,
-        [switch]$All        
+        [switch]$All
     )
 
-    $url = "https://unityapi.webrootcloudav.com/service/api/console/gsm/$($GSMKey)/sites/$($SiteID)/threathistory?startDate=$($startDate)&endDate=$($endDate)&returnedInfo=$($returnedInfo)&pageSize=$($pageSize)&pageNr=$($pageNr)"    
-    
+    $url = "https://unityapi.webrootcloudav.com/service/api/console/gsm/$($GSMKey)/sites/$($SiteID)/threathistory?startDate=$($startDate)&endDate=$($endDate)&returnedInfo=$($returnedInfo)&pageSize=$($pageSize)&pageNr=$($pageNr)"
+
     Write-Verbose "Connecting"
     Connect-WebrootUnity
-            
+
     try{
         $Obj = Invoke-RestMethod -Method Get -Uri $url -ContentType "application/json" -Headers @{"Authorization" = "Bearer $($WebrootAuthToken.access_token)"}
         $Obj.ThreatRecords
         while($All -and ($($Obj.TotalAvailable) -gt ($Obj.PageNr * $Obj.PageSize))){
             $pageNr ++
-            $url = "https://unityapi.webrootcloudav.com/service/api/console/gsm/$($GSMKey)/sites/$($SiteID)/threathistory?startDate=$($startDate)&endDate=$($endDate)&returnedInfo=$($returnedInfo)&pageSize=$($pageSize)&pageNr=$($pageNr)"    
+            $url = "https://unityapi.webrootcloudav.com/service/api/console/gsm/$($GSMKey)/sites/$($SiteID)/threathistory?startDate=$($startDate)&endDate=$($endDate)&returnedInfo=$($returnedInfo)&pageSize=$($pageSize)&pageNr=$($pageNr)"
             $Obj = Invoke-RestMethod -Method Get -Uri $url -ContentType "application/json" -Headers @{"Authorization" = "Bearer $($WebrootAuthToken.access_token)"}
             $Obj.ThreatRecords
         }
@@ -32,5 +32,5 @@ function Get-WebrootConsoleGSMThreatList {
     catch{
         Write-Error "Error: $($Error[0])"
     }
-    
+
 }

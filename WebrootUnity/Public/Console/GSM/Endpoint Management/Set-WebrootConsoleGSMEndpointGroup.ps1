@@ -10,7 +10,7 @@ function Set-WebrootConsoleGSMEndpointGroup {
         [string]$SourceGroupId,
         [Parameter(Mandatory=$True)]
         [string]$TargetGroupId,
-        [ValidateSet("Unchanged","All","Update")] 
+        [ValidateSet("Unchanged","All","Update")]
         [string]$Inheritance = "Unchanged"
     )
 
@@ -21,7 +21,7 @@ function Set-WebrootConsoleGSMEndpointGroup {
         'All'{$Inheritance = 1}
         'Update'{$Inheritance = 3}
     }
-    
+
     $Body = @{EndpointsList=$EndpointsList;
                 SourceGroupId=$SourceGroupId;
                 TargetGroupId=$TargetGroupId;
@@ -31,12 +31,12 @@ function Set-WebrootConsoleGSMEndpointGroup {
     if ($PSCmdlet.ShouldProcess($WebRequestArguments.URI, "Invoke-RestMethod, with body:`r`n$Body`r`n")) {
         Connect-WebrootUnity
         Write-Verbose $Body
-            
+
         try{
             Invoke-RestMethod -Method Put -Uri $url -ContentType "application/json" -Body $Body -Headers @{"Authorization" = "Bearer $($WebrootAuthToken.access_token)"}
         }
         catch{
             Write-Error "Error: $($Error[0])"
         }
-    }    
+    }
 }

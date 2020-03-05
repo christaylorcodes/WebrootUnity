@@ -10,17 +10,17 @@ function Enable-WebrootConsoleGSMEndpoint {
     )
 
     $url = "https://unityapi.webrootcloudav.com/service/api/console/gsm/$($GSMKey)/sites/$($SiteID)/endpoints/reactivate"
-    
+
     $Body = @{EndpointsList=$EndpointsList;}
     $Body = $Body | ConvertTo-Json
 
     Connect-WebrootUnity
-            
+
     try{
         Invoke-RestMethod -Method Post -Uri $url -ContentType "application/json" -Body $Body -Headers @{"Authorization" = "Bearer $($WebrootAuthToken.access_token)"}
     }
     catch{
         Write-Error "Error: $($Error[0])"
     }
-    
+
 }

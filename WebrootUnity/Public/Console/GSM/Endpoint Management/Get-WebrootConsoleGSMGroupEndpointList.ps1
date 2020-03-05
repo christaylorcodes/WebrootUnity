@@ -11,14 +11,14 @@ function Get-WebrootConsoleGSMGroupEndpointList {
         [string]$orderDirection,
         [int]$pageSize,
         [int]$pageNr,
-        [switch]$All        
+        [switch]$All
     )
 
     $url = "https://unityapi.webrootcloudav.com/service/api/console/gsm/$($GSMKey)/sites/$($SiteId)/groups/$($groupId)/endpoints?order=$($order)&orderDirection=$($orderDirection)&pageSize=$($pageSize)&pageNr=$($pageNr)"
-    
+
     Write-Verbose "Connecting"
     Connect-WebrootUnity
-            
+
     try{
         $Obj = Invoke-RestMethod -Method Get -Uri $url -ContentType "application/json" -Headers @{"Authorization" = "Bearer $($WebrootAuthToken.access_token)"}
         $Obj.Endpoints
@@ -32,5 +32,5 @@ function Get-WebrootConsoleGSMGroupEndpointList {
     catch{
         Write-Error "Error: $($Error[0])"
     }
-    
+
 }

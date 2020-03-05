@@ -15,14 +15,14 @@ function Get-WebrootConsoleGSMGroupCommandList {
         [string]$orderDirection,
         [int]$pageSize,
         [int]$pageNr,
-        [switch]$All        
+        [switch]$All
     )
 
-    $url = "https://unityapi.webrootcloudav.com/service/api/console/gsm/$($GSMKey)/sites/$($SiteId)/groups/$($groupId)/commands?command=$($command)&commandState=$($commandState)&startDate=$($startDate)&endDate=$($endDate)&order=$($order)&orderDirection=$($orderDirection)&pageSize=$($pageSize)&pageNr=$($pageNr)"    
-    
+    $url = "https://unityapi.webrootcloudav.com/service/api/console/gsm/$($GSMKey)/sites/$($SiteId)/groups/$($groupId)/commands?command=$($command)&commandState=$($commandState)&startDate=$($startDate)&endDate=$($endDate)&order=$($order)&orderDirection=$($orderDirection)&pageSize=$($pageSize)&pageNr=$($pageNr)"
+
     Write-Verbose "Connecting"
     Connect-WebrootUnity
-            
+
     try{
         $Obj = Invoke-RestMethod -Method Get -Uri $url -ContentType "application/json" -Headers @{"Authorization" = "Bearer $($WebrootAuthToken.access_token)"}
         $Obj.Commands
@@ -36,5 +36,5 @@ function Get-WebrootConsoleGSMGroupCommandList {
     catch{
         Write-Error "Error: $($Error[0])"
     }
-    
+
 }

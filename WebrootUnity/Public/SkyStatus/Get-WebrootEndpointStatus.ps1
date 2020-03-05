@@ -9,14 +9,14 @@ function Get-WebrootEndpointStatus {
         $modifiedSince,
         [int]$batchSize,
         $continuation,
-        [switch]$All        
+        [switch]$All
     )
 
     $url = "https://unityapi.webrootcloudav.com/service/api/status/site/$($keyCode)?machineId=$($machineId)&returnedInfo=$($returnedInfo)&modifiedSince=$($modifiedSince)&batchSize=$($batchSize)&continuation=$($continuation)"
-    
+
     Write-Verbose "Connecting"
     Connect-WebrootUnity
-            
+
     try{
         $Obj = Invoke-RestMethod -Method Get -Uri $url -ContentType "application/json" -Headers @{"Authorization" = "Bearer $($WebrootAuthToken.access_token)"}
         $Obj.QueryResults
@@ -31,5 +31,5 @@ function Get-WebrootEndpointStatus {
     catch{
         Write-Error "Error: $($Error[0])"
     }
-    
+
 }

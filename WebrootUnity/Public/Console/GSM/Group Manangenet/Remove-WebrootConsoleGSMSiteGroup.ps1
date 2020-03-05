@@ -12,10 +12,10 @@ function Remove-WebrootConsoleGSMSiteGroup {
     )
 
     $url = "https://unityapi.webrootcloudav.com/service/api/console/gsm/$($GSMKey)/sites/$($SiteID)/groups/$($GroupID)?newGroupId=$($NewGroupID)"
-    
+
     if ($PSCmdlet.ShouldProcess($WebRequestArguments.URI, "Invoke-RestMethod, with Site: $SiteID and Group: $GroupID")) {
         Connect-WebrootUnity
-            
+
         try{
             Invoke-RestMethod -Method Delete -Uri $url -ContentType "application/json" -Headers @{"Authorization" = "Bearer $($WebrootAuthToken.access_token)"}
         }

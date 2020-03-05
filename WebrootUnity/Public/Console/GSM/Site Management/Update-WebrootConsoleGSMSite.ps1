@@ -12,7 +12,7 @@ function Update-WebrootConsoleGSMSite {
         [int]$Seats,
         [Parameter(Mandatory=$True)]
         [string]$Comments,
-        [ValidateSet("Annually","Quarterly","Monthly","Weekly")] 
+        [ValidateSet("Annually","Quarterly","Monthly","Weekly")]
         [string]$BillingCycle,
         [string]$BillingDate,
         [switch]$GlobalPolicies,
@@ -23,7 +23,7 @@ function Update-WebrootConsoleGSMSite {
     )
 
     $url = "https://unityapi.webrootcloudav.com/service/api/console/gsm/$($GSMKey)/sites/$($SiteID)"
-    
+
     $Body = @{SiteName=$SiteName;
                 Seats=$Seats;
                 Comments=$Comments;
@@ -39,7 +39,7 @@ function Update-WebrootConsoleGSMSite {
     if ($PSCmdlet.ShouldProcess($WebRequestArguments.URI, "Invoke-RestMethod, with body:`r`n$Body`r`n")) {
         Connect-WebrootUnity
         Write-Verbose $Body
-            
+
         try{
             Invoke-RestMethod -Method Put -Uri $url -ContentType "application/json" -Body $Body -Headers @{"Authorization" = "Bearer $($WebrootAuthToken.access_token)"}
         }

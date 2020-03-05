@@ -10,15 +10,15 @@ function Disable-WebrootConsoleGSMEndpointGroup {
         [string]$GroupID
     )
 
-    $url = "https://unityapi.webrootcloudav.com/service/api/console/gsm/$($GSMKey)/sites/$($SiteID)/groups/$($GroupID)/endpoints/deactivate"    
+    $url = "https://unityapi.webrootcloudav.com/service/api/console/gsm/$($GSMKey)/sites/$($SiteID)/groups/$($GroupID)/endpoints/deactivate"
 
     Connect-WebrootUnity
-            
+
     try{
         Invoke-RestMethod -Method Post -Uri $url -ContentType "application/json" -Headers @{"Authorization" = "Bearer $($WebrootAuthToken.access_token)"}
     }
     catch{
         Write-Error "Error: $($Error[0])"
     }
-    
+
 }

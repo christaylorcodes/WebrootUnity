@@ -9,13 +9,13 @@ function Convert-WebrootConsoleGSMSite {
     )
 
     $url = "https://unityapi.webrootcloudav.com/service/api/console/access/gsm/$($GSMKey)/sites/$($SiteID)/converttrial"
-    
+
     Connect-WebrootUnity
-            
+
     try{
         Invoke-RestMethod -Method Post -Uri $url -ContentType "application/json" -Headers @{"Authorization" = "Bearer $($WebrootAuthToken.access_token)"}
     }
     catch{
         Write-Error "Error: $($Error[0])"
-    }    
+    }
 }

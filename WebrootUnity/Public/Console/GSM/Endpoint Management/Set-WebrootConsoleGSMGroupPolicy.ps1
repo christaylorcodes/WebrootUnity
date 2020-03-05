@@ -13,14 +13,14 @@ function Set-WebrootConsoleGSMGroupPolicy {
     )
 
     $url = "https://unityapi.webrootcloudav.com/service/api/console/gsm/$($GSMKey)/sites/$($SiteID)/groups/$($GroupID)/endpoints/policy"
-    
+
     $Body = @{PolicyId=$PolicyId;}
     $Body = $Body | ConvertTo-Json
 
     if ($PSCmdlet.ShouldProcess($WebRequestArguments.URI, "Invoke-RestMethod, with body:`r`n$Body`r`n")) {
         Connect-WebrootUnity
         Write-Verbose $Body
-            
+
         try{
             Invoke-RestMethod -Method Put -Uri $url -ContentType "application/json" -Body $Body -Headers @{"Authorization" = "Bearer $($WebrootAuthToken.access_token)"}
         }

@@ -9,16 +9,16 @@ function Remove-WebrootConsoleGSMSite {
     )
 
     $url = "https://unityapi.webrootcloudav.com/service/api/console/access/gsm/$($GSMKey)/sites/$($SiteID)/deactivate"
-    
+
     if ($PSCmdlet.ShouldProcess($WebRequestArguments.URI, "Invoke-RestMethod, with SiteID: $SiteID")) {
         Connect-WebrootUnity
         Write-Verbose $Body
-            
+
         try{
             Invoke-RestMethod -Method Post -Uri $url -ContentType "application/json" -Headers @{"Authorization" = "Bearer $($WebrootAuthToken.access_token)"}
         }
         catch{
             Write-Error "Error: $($Error[0])"
         }
-    }    
+    }
 }

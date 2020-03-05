@@ -11,7 +11,7 @@ function New-WebrootConsoleAdminRequest {
     )
 
     $url = "https://unityapi.webrootcloudav.com/service/api/console/access/gsm/$($GSMKey)/addadminrequest"
-    
+
     $Body = @{UserEmail=$UserEmail;
                 ConfirmEmail=$ConfirmEmail;}
     $Body = $Body | ConvertTo-Json
@@ -32,5 +32,5 @@ function New-WebrootConsoleAdminRequest {
         catch{
             Write-Error "Error: $($Error[0])"
         }
-    }    
+    }
 }

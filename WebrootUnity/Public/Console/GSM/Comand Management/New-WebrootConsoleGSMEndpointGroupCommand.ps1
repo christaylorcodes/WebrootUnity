@@ -14,7 +14,7 @@ function New-WebrootConsoleGSMEndpointGroupCommand  {
     )
 
     $url = "https://unityapi.webrootcloudav.com/service/api/console/gsm/$($GSMKey)/sites/$($SiteID)/groups/$($groupId)/endpoints/commands"
-    
+
     $Body = @{EndpointsList=$EndpointsList;
                 Command=$Command;
                 Parameters=$Parameters;}
@@ -23,12 +23,12 @@ function New-WebrootConsoleGSMEndpointGroupCommand  {
 
     if ($PSCmdlet.ShouldProcess($WebRequestArguments.URI, "Invoke-RestMethod, with body:`r`n$Body`r`n")) {
         Connect-WebrootUnity
-            
+
         try{
             Invoke-RestMethod -Method Post -Uri $url -ContentType "application/json" -Body $Body -Headers @{"Authorization" = "Bearer $($WebrootAuthToken.access_token)"}
         }
         catch{
             Write-Error "Error: $($Error[0])"
         }
-    }    
+    }
 }

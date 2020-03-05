@@ -8,7 +8,7 @@ function Set-WebrootConsoleGSMSiteGroup {
         [string]$SiteID,
         [Parameter(Mandatory=$True)]
         [string]$GroupID,
-        [ValidateSet("Unchanged","All","Update")] 
+        [ValidateSet("Unchanged","All","Update")]
         [string]$Inheritance = "Unchanged",
         [string]$GroupName,
         [string]$GroupDescription,
@@ -22,7 +22,7 @@ function Set-WebrootConsoleGSMSiteGroup {
         'All'{$Inheritance = 1}
         'Update'{$Inheritance = 3}
     }
-    
+
     $Body = @{Inheritance=$Inheritance;
                 GroupName=$GroupName;
                 GroupDescription=$GroupDescription;
@@ -32,7 +32,7 @@ function Set-WebrootConsoleGSMSiteGroup {
     if ($PSCmdlet.ShouldProcess($WebRequestArguments.URI, "Invoke-RestMethod, with body:`r`n$Body`r`n")) {
         Connect-WebrootUnity
         Write-Verbose $Body
-            
+
         try{
             Invoke-RestMethod -Method Put -Uri $url -ContentType "application/json" -Body $Body -Headers @{"Authorization" = "Bearer $($WebrootAuthToken.access_token)"}
         }

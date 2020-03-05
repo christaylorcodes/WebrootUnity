@@ -8,14 +8,14 @@ function Get-WebrootEndpointStatusGSM {
         $modifiedSince,
         [int]$batchSize,
         $continuation,
-        [switch]$All        
+        [switch]$All
     )
 
     $url = "https://unityapi.webrootcloudav.com/service/api/status/gsm/$($KeyCode)?machineId=$($machineId)&returnedInfo=$($returnedInfo)&modifiedSince=$($modifiedSince)&batchSize=$($batchSize)&continuation=$($continuation)"
-    
+
     Write-Verbose "Connecting"
     Connect-WebrootUnity
-            
+
     try{
         $Obj = Invoke-RestMethod -Method Get -Uri $url -ContentType "application/json" -Headers @{"Authorization" = "Bearer $($WebrootAuthToken.access_token)"}
         $Obj.QueryResults
@@ -30,5 +30,5 @@ function Get-WebrootEndpointStatusGSM {
     catch{
         Write-Error "Error: $($Error[0])"
     }
-    
+
 }

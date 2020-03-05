@@ -10,12 +10,12 @@ function Set-WebrootConsoleGSMSiteUser {
         [Parameter(Mandatory=$True)]
         [string]$UserID,
         [Parameter(Mandatory=$True)]
-        [ValidateSet("Full","Basic","None")] 
+        [ValidateSet("Full","Basic","None")]
         [string]$AccessLevel
     )
 
     $url = "https://unityapi.webrootcloudav.com/service/api/console/gsm/$($GSMKey)/sites/$($SiteID)/admins"
-    
+
     switch ($AccessLevel){
         'Full'  {$AccessLevel = 128}
         'Basic' {$AccessLevel = 1}
@@ -47,7 +47,7 @@ function Set-WebrootConsoleGSMSiteUser {
     if ($PSCmdlet.ShouldProcess($WebRequestArguments.URI, "Invoke-RestMethod, with body:`r`n$Body`r`n")) {
         Connect-WebrootUnity
         Write-Verbose $Body
-        
+
         try{
             Invoke-RestMethod -Method Put -Uri $url -ContentType "application/json" -Body $Body -Headers @{"Authorization" = "Bearer $($WebrootAuthToken.access_token)"}
         }

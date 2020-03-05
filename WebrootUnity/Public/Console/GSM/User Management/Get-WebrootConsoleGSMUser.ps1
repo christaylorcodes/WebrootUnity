@@ -9,10 +9,10 @@ function Get-WebrootConsoleGSMUser {
     )
 
     $url = "https://unityapi.webrootcloudav.com/service/api/console/gsm/$($GSMKey)/admins/$($UserID)"
-    
+
     Write-Verbose "Connecting"
     Connect-WebrootUnity
-            
+
     try{
         $Obj =Invoke-RestMethod -Method Get -Uri $url -ContentType "application/json" -Headers @{"Authorization" = "Bearer $($WebrootAuthToken.access_token)"}
         $Obj.Admins
@@ -20,5 +20,5 @@ function Get-WebrootConsoleGSMUser {
     catch{
         Write-Error "Error: $($Error[0])"
     }
-    
+
 }
