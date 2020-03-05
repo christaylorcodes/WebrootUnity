@@ -13,138 +13,138 @@ This module is a PowerShell wrapper for the [Webroot Unity API](https://unityapi
 This module looks to mirror its functionality.
 
 ## WebrootUnity Cmdlets
-### [Connect-WebrootUnity](Connect-WebrootUnity.md)
+### [Connect-WebrootUnity](./Docs/Connect-WebrootUnity.md)
 Used to establish your connection to the API.
 
-### [Convert-WebrootConsoleGSMSite](Convert-WebrootConsoleGSMSite.md)
+### [Convert-WebrootConsoleGSMSite](./Docs/Convert-WebrootConsoleGSMSite.md)
 {{ Fill in the Description }}
 
-### [Deactivate-WebrootConsoleGSMEndpoint](Deactivate-WebrootConsoleGSMEndpoint.md)
+### [Deactivate-WebrootConsoleGSMEndpoint](./Docs/Deactivate-WebrootConsoleGSMEndpoint.md)
 {{ Fill in the Description }}
 
-### [Deactivate-WebrootConsoleGSMEndpointGroup](Deactivate-WebrootConsoleGSMEndpointGroup.md)
+### [Deactivate-WebrootConsoleGSMEndpointGroup](./Docs/Deactivate-WebrootConsoleGSMEndpointGroup.md)
 {{ Fill in the Description }}
 
-### [Get-WebrootConsoleAdminRequest](Get-WebrootConsoleAdminRequest.md)
+### [Get-WebrootConsoleAdminRequest](./Docs/Get-WebrootConsoleAdminRequest.md)
 {{ Fill in the Description }}
 
-### [Get-WebrootConsoleGSMCommandList](Get-WebrootConsoleGSMCommandList.md)
+### [Get-WebrootConsoleGSMCommandList](./Docs/Get-WebrootConsoleGSMCommandList.md)
 {{ Fill in the Description }}
 
-### [Get-WebrootConsoleGSMEndpointCommandList](Get-WebrootConsoleGSMEndpointCommandList.md)
+### [Get-WebrootConsoleGSMEndpointCommandList](./Docs/Get-WebrootConsoleGSMEndpointCommandList.md)
 {{ Fill in the Description }}
 
-### [Get-WebrootConsoleGSMEndpointThreatList](Get-WebrootConsoleGSMEndpointThreatList.md)
+### [Get-WebrootConsoleGSMEndpointThreatList](./Docs/Get-WebrootConsoleGSMEndpointThreatList.md)
 {{ Fill in the Description }}
 
-### [Get-WebrootConsoleGSMGroupCommandList](Get-WebrootConsoleGSMGroupCommandList.md)
+### [Get-WebrootConsoleGSMGroupCommandList](./Docs/Get-WebrootConsoleGSMGroupCommandList.md)
 {{ Fill in the Description }}
 
-### [Get-WebrootConsoleGSMGroupEndpointList](Get-WebrootConsoleGSMGroupEndpointList.md)
+### [Get-WebrootConsoleGSMGroupEndpointList](./Docs/Get-WebrootConsoleGSMGroupEndpointList.md)
 {{ Fill in the Description }}
 
-### [Get-WebrootConsoleGSMGroupThreatList](Get-WebrootConsoleGSMGroupThreatList.md)
+### [Get-WebrootConsoleGSMGroupThreatList](./Docs/Get-WebrootConsoleGSMGroupThreatList.md)
 {{ Fill in the Description }}
 
-### [Get-WebrootConsoleGSMPolicy](Get-WebrootConsoleGSMPolicy.md)
+### [Get-WebrootConsoleGSMPolicy](./Docs/Get-WebrootConsoleGSMPolicy.md)
 {{ Fill in the Description }}
 
-### [Get-WebrootConsoleGSMPolicyList](Get-WebrootConsoleGSMPolicyList.md)
+### [Get-WebrootConsoleGSMPolicyList](./Docs/Get-WebrootConsoleGSMPolicyList.md)
 {{ Fill in the Description }}
 
-### [Get-WebrootConsoleGSMSite](Get-WebrootConsoleGSMSite.md)
+### [Get-WebrootConsoleGSMSite](./Docs/Get-WebrootConsoleGSMSite.md)
 {{ Fill in the Description }}
 
-### [Get-WebrootConsoleGSMSiteEndpoint](Get-WebrootConsoleGSMSiteEndpoint.md)
+### [Get-WebrootConsoleGSMSiteEndpoint](./Docs/Get-WebrootConsoleGSMSiteEndpoint.md)
 {{ Fill in the Description }}
 
-### [Get-WebrootConsoleGSMSiteEndpointList](Get-WebrootConsoleGSMSiteEndpointList.md)
+### [Get-WebrootConsoleGSMSiteEndpointList](./Docs/Get-WebrootConsoleGSMSiteEndpointList.md)
 {{ Fill in the Description }}
 
-### [Get-WebrootConsoleGSMSiteGroup](Get-WebrootConsoleGSMSiteGroup.md)
+### [Get-WebrootConsoleGSMSiteGroup](./Docs/Get-WebrootConsoleGSMSiteGroup.md)
 {{ Fill in the Description }}
 
-### [Get-WebrootConsoleGSMSiteGroupList](Get-WebrootConsoleGSMSiteGroupList.md)
+### [Get-WebrootConsoleGSMSiteGroupList](./Docs/Get-WebrootConsoleGSMSiteGroupList.md)
 {{ Fill in the Description }}
 
-### [Get-WebrootConsoleGSMSiteList](Get-WebrootConsoleGSMSiteList.md)
+### [Get-WebrootConsoleGSMSiteList](./Docs/Get-WebrootConsoleGSMSiteList.md)
 {{ Fill in the Description }}
 
-### [Get-WebrootConsoleGSMSitePolicy](Get-WebrootConsoleGSMSitePolicy.md)
+### [Get-WebrootConsoleGSMSitePolicy](./Docs/Get-WebrootConsoleGSMSitePolicy.md)
 {{ Fill in the Description }}
 
-### [Get-WebrootConsoleGSMSitePolicyList](Get-WebrootConsoleGSMSitePolicyList.md)
+### [Get-WebrootConsoleGSMSitePolicyList](./Docs/Get-WebrootConsoleGSMSitePolicyList.md)
 {{ Fill in the Description }}
 
-### [Get-WebrootConsoleGSMSiteUser](Get-WebrootConsoleGSMSiteUser.md)
+### [Get-WebrootConsoleGSMSiteUser](./Docs/Get-WebrootConsoleGSMSiteUser.md)
 {{ Fill in the Description }}
 
-### [Get-WebrootConsoleGSMSiteUserList](Get-WebrootConsoleGSMSiteUserList.md)
+### [Get-WebrootConsoleGSMSiteUserList](./Docs/Get-WebrootConsoleGSMSiteUserList.md)
 {{ Fill in the Description }}
 
-### [Get-WebrootConsoleGSMThreatList](Get-WebrootConsoleGSMThreatList.md)
+### [Get-WebrootConsoleGSMThreatList](./Docs/Get-WebrootConsoleGSMThreatList.md)
 {{ Fill in the Description }}
 
-### [Get-WebrootConsoleGSMUser](Get-WebrootConsoleGSMUser.md)
+### [Get-WebrootConsoleGSMUser](./Docs/Get-WebrootConsoleGSMUser.md)
 {{ Fill in the Description }}
 
-### [Get-WebrootConsoleGSMUserList](Get-WebrootConsoleGSMUserList.md)
+### [Get-WebrootConsoleGSMUserList](./Docs/Get-WebrootConsoleGSMUserList.md)
 {{ Fill in the Description }}
 
-### [Get-WebrootEndpointStatus](Get-WebrootEndpointStatus.md)
+### [Get-WebrootEndpointStatus](./Docs/Get-WebrootEndpointStatus.md)
 {{ Fill in the Description }}
 
-### [Get-WebrootEndpointStatusGSM](Get-WebrootEndpointStatusGSM.md)
+### [Get-WebrootEndpointStatusGSM](./Docs/Get-WebrootEndpointStatusGSM.md)
 {{ Fill in the Description }}
 
-### [Get-WebrootHealthCheckPing](Get-WebrootHealthCheckPing.md)
+### [Get-WebrootHealthCheckPing](./Docs/Get-WebrootHealthCheckPing.md)
 {{ Fill in the Description }}
 
-### [Get-WebrootHealthCheckVersion](Get-WebrootHealthCheckVersion.md)
+### [Get-WebrootHealthCheckVersion](./Docs/Get-WebrootHealthCheckVersion.md)
 {{ Fill in the Description }}
 
-### [New-WebrootConsoleAdminRequest](New-WebrootConsoleAdminRequest.md)
+### [New-WebrootConsoleAdminRequest](./Docs/New-WebrootConsoleAdminRequest.md)
 {{ Fill in the Description }}
 
-### [New-WebrootConsoleGSMEndpointCommand](New-WebrootConsoleGSMEndpointCommand.md)
+### [New-WebrootConsoleGSMEndpointCommand](./Docs/New-WebrootConsoleGSMEndpointCommand.md)
 {{ Fill in the Description }}
 
-### [New-WebrootConsoleGSMEndpointGroupCommand](New-WebrootConsoleGSMEndpointGroupCommand.md)
+### [New-WebrootConsoleGSMEndpointGroupCommand](./Docs/New-WebrootConsoleGSMEndpointGroupCommand.md)
 {{ Fill in the Description }}
 
-### [New-WebrootConsoleGSMSiteGroup](New-WebrootConsoleGSMSiteGroup.md)
+### [New-WebrootConsoleGSMSiteGroup](./Docs/New-WebrootConsoleGSMSiteGroup.md)
 {{ Fill in the Description }}
 
-### [Reactivate-WebrootConsoleGSMEndpoint](Reactivate-WebrootConsoleGSMEndpoint.md)
+### [Reactivate-WebrootConsoleGSMEndpoint](./Docs/Reactivate-WebrootConsoleGSMEndpoint.md)
 {{ Fill in the Description }}
 
-### [Remove-WebrootConsoleGSMSite](Remove-WebrootConsoleGSMSite.md)
+### [Remove-WebrootConsoleGSMSite](./Docs/Remove-WebrootConsoleGSMSite.md)
 {{ Fill in the Description }}
 
-### [Remove-WebrootConsoleGSMSiteGroup](Remove-WebrootConsoleGSMSiteGroup.md)
+### [Remove-WebrootConsoleGSMSiteGroup](./Docs/Remove-WebrootConsoleGSMSiteGroup.md)
 {{ Fill in the Description }}
 
-### [Resume-WebrootConsoleGSMSite](Resume-WebrootConsoleGSMSite.md)
+### [Resume-WebrootConsoleGSMSite](./Docs/Resume-WebrootConsoleGSMSite.md)
 {{ Fill in the Description }}
 
-### [Set-WebrootConsoleGSMEndpointGroup](Set-WebrootConsoleGSMEndpointGroup.md)
+### [Set-WebrootConsoleGSMEndpointGroup](./Docs/Set-WebrootConsoleGSMEndpointGroup.md)
 {{ Fill in the Description }}
 
-### [Set-WebrootConsoleGSMEndpointPolicy](Set-WebrootConsoleGSMEndpointPolicy.md)
+### [Set-WebrootConsoleGSMEndpointPolicy](./Docs/Set-WebrootConsoleGSMEndpointPolicy.md)
 {{ Fill in the Description }}
 
-### [Set-WebrootConsoleGSMGroupPolicy](Set-WebrootConsoleGSMGroupPolicy.md)
+### [Set-WebrootConsoleGSMGroupPolicy](./Docs/Set-WebrootConsoleGSMGroupPolicy.md)
 {{ Fill in the Description }}
 
-### [Set-WebrootConsoleGSMSiteGroup](Set-WebrootConsoleGSMSiteGroup.md)
+### [Set-WebrootConsoleGSMSiteGroup](./Docs/Set-WebrootConsoleGSMSiteGroup.md)
 {{ Fill in the Description }}
 
-### [Set-WebrootConsoleGSMSiteUser](Set-WebrootConsoleGSMSiteUser.md)
+### [Set-WebrootConsoleGSMSiteUser](./Docs/Set-WebrootConsoleGSMSiteUser.md)
 {{ Fill in the Description }}
 
-### [Suspend-WebrootConsoleGSMSite](Suspend-WebrootConsoleGSMSite.md)
+### [Suspend-WebrootConsoleGSMSite](./Docs/Suspend-WebrootConsoleGSMSite.md)
 {{ Fill in the Description }}
 
-### [Update-WebrootConsoleGSMSite](Update-WebrootConsoleGSMSite.md)
+### [Update-WebrootConsoleGSMSite](./Docs/Update-WebrootConsoleGSMSite.md)
 {{ Fill in the Description }}
 
