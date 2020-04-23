@@ -1,5 +1,5 @@
 function New-WebrootConsoleGSMSiteGroup {
-    #https://unityapi.webrootcloudav.com/Docs/APIDoc/Api/POST-api-console-gsm-gsmKey-sites-siteId-groups
+    # https://unityapi.webrootcloudav.com/Docs/APIDoc/Api/POST-api-console-gsm-gsmKey-sites-siteId-groups
     [CmdletBinding(SupportsShouldProcess, ConfirmImpact='Medium')]
     param(
         [Parameter(Mandatory=$True)]
@@ -19,8 +19,7 @@ function New-WebrootConsoleGSMSiteGroup {
         GroupName = $GroupName
         GroupDescription = $GroupDescription
         PolicyId = $PolicyId
-    }
-    $Body = $Body | ConvertTo-Json
+    } | ConvertTo-Json
 
     if ($PSCmdlet.ShouldProcess($WebRequestArguments.URI, "Invoke-RestMethod, with body:`r`n$Body`r`n")) {
         Connect-WebrootUnity
