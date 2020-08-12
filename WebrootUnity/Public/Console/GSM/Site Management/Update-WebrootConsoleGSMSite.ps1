@@ -6,11 +6,11 @@ function Update-WebrootConsoleGSMSite {
         [string]$GSMKey,
         [Parameter(Mandatory=$True)]
         [string]$SiteID,
-        [Parameter(Mandatory=$True)]
+        [Parameter(Mandatory=$False)]
         [string]$SiteName,
-        [Parameter(Mandatory=$True)]
+        [Parameter(Mandatory=$False)]
         [int]$Seats,
-        [Parameter(Mandatory=$True)]
+        [Parameter(Mandatory=$False)]
         [string]$Comments,
         [ValidateSet("Annually","Quarterly","Monthly","Weekly")]
         [string]$BillingCycle,
@@ -18,12 +18,14 @@ function Update-WebrootConsoleGSMSite {
         [switch]$GlobalPolicies,
         [switch]$GlobalOverrides,
         [string]$PolicyId,
-        [Parameter(Mandatory=$True)]
+        [Parameter(Mandatory=$False)]
         [string]$Emails
     )
 
     $url = "https://unityapi.webrootcloudav.com/service/api/console/gsm/$($GSMKey)/sites/$($SiteID)"
 
+    
+    
     $Body = @{SiteName=$SiteName;
                 Seats=$Seats;
                 Comments=$Comments;
@@ -33,6 +35,9 @@ function Update-WebrootConsoleGSMSite {
                 GlobalOverrides=$GlobalOverrides;
                 PolicyId=$PolicyId;
                 Emails=$Emails;}
+    
+    ($Body.GetEnumerator() | ? { -not $_.Value }) | % {$Body.Remove($_.Name) }
+    
     $Body = $Body | ConvertTo-Json
 
 
