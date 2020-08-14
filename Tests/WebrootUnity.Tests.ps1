@@ -36,7 +36,7 @@ Describe "Connect-WebrootUnity  PS$PSVersion Integrations tests" {
                 'credentials' = $Credentials
             }
 
-            $Output = Connect-WebrootUnity @ConnectionInfo
+            Connect-WebrootUnity @ConnectionInfo
         }
     }
 }

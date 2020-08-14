@@ -13,9 +13,9 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-Update-WebrootConsoleGSMSite [-GSMKey] <String> [-SiteID] <String> [-SiteName] <String> [-Seats] <Int32>
- [-Comments] <String> [[-BillingCycle] <String>] [[-BillingDate] <String>] [-GlobalPolicies] [-GlobalOverrides]
- [[-PolicyId] <String>] [-Emails] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+Update-WebrootConsoleGSMSite [-GSMKey] <String> [-SiteID] <String> [[-SiteName] <String>] [[-Seats] <Int32>]
+ [[-Comments] <String>] [[-BillingCycle] <String>] [[-BillingDate] <String>] [-GlobalPolicies]
+ [-GlobalOverrides] [[-PolicyId] <String>] [[-Emails] <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -71,7 +71,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: True
+Required: False
 Position: 4
 Default value: None
 Accept pipeline input: False
@@ -86,7 +86,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: True
+Required: False
 Position: 8
 Default value: None
 Accept pipeline input: False
@@ -161,7 +161,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 
-Required: True
+Required: False
 Position: 3
 Default value: None
 Accept pipeline input: False
@@ -191,7 +191,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: True
+Required: False
 Position: 2
 Default value: None
 Accept pipeline input: False

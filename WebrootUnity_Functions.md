@@ -8,9 +8,7 @@ Locale: en-US
 
 # WebrootUnity Module
 ## Description
-This module is a PowerShell wrapper for the [Webroot Unity API](https://unityapi.webrootcloudav.com/Docs/en/APIDoc/APIReference#apiReference).
-
-This module looks to mirror its functionality.
+This module is a PowerShell wrapper for the Webroot Unity API . This module looks to mirror its functionality.
 
 ## WebrootUnity Cmdlets
 ### [Connect-WebrootUnity](Connect-WebrootUnity.md)

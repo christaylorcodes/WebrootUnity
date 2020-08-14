@@ -5,7 +5,7 @@ function Resume-WebrootConsoleGSMSite {
         [Parameter(Mandatory=$True)]
         [string]$GSMKey,
         [Parameter(Mandatory=$True)]
-        [string]$SiteName
+        [string]$SiteID
     )
 
     $url = "https://unityapi.webrootcloudav.com/service/api/console/access/gsm/$($GSMKey)/sites/$($SiteID)/resume"

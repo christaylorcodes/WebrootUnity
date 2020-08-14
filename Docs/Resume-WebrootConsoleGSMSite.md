@@ -13,7 +13,7 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-Resume-WebrootConsoleGSMSite [-GSMKey] <String> [-SiteName] <String> [<CommonParameters>]
+Resume-WebrootConsoleGSMSite [-GSMKey] <String> -SiteID <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -45,8 +45,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SiteName
-{{ Fill SiteName Description }}
+### -SiteID
+{{ Fill SiteID Description }}
 
 ```yaml
 Type: String
@@ -54,7 +54,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
-Position: 1
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
