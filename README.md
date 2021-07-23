@@ -1,36 +1,61 @@
+<h1 align="center">
+  <br>
+  <img src="https://www-cdn.webroot.com/9614/7500/7505/brand-page-webroot-secureanywhere-logo-green.png" alt="logo" width = 80% ></a>
+  <br>
+  Webroot Unity API
+  <br>
+</h1>
+
+<h4 align="center">
+
+PowerShell wrapper for the [Webroot Unity REST API](https://unityapi.webrootcloudav.com/Docs/en/APIDoc)
+
+</h4>
+
+<div align="center">
+
 [![Build status](https://ci.appveyor.com/api/projects/status/so4anml73ut5cjnp?svg=true)](https://ci.appveyor.com/project/christaylorcodes/webrootunity)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/5a6a2b309d3c4e71a1ef28021fcd58f3)](https://www.codacy.com/manual/christaylorcodes/WebrootUnity?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=christaylorcodes/WebrootUnity&amp;utm_campaign=Badge_Grade)
 [![Gallery](https://img.shields.io/powershellgallery/v/WebrootUnity?label=PS%20Gallery&logo=powershell&logoColor=white)](https://www.powershellgallery.com/packages/WebrootUnity)
+[![Donate](https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&amp;style=flat)](https://github.com/christaylorcodes/GitHub-Template/blob/main/DONATE.md)
 
-![Webroot](https://www-cdn.webroot.com/9614/7500/7505/brand-page-webroot-secureanywhere-logo-green.png)
+</div>
+<p align="center">
+    <a href="WebrootUnity_Functions.md">List of Functions</a> •
+    <a href="#examples">Examples</a> •
+    <a href="#install">Install</a> •
+    <a href="https://github.com/christaylorcodes/GitHub-Template/blob/main/CONTRIBUTING.md">Contribute</a> •
+    <a href="https://github.com/christaylorcodes/GitHub-Template/blob/main/CONTRIBUTING.md#reporting-bugs">Submit a Bug</a> •
+    <a href="https://github.com/christaylorcodes/GitHub-Template/blob/main/CONTRIBUTING.md#suggesting-enhancements">Request a Feature</a>
+</p>
 
-## This is a PowerShell wrapper for the [Webroot Unity REST API](https://unityapi.webrootcloudav.com/Docs/en/APIDoc)
+<!-- Summary -->
 
-This module makes it easy to leverage PowerShell to automate tasks in Webroot's online services and can be easily installed from the [PowerShellGallery](https://www.powershellgallery.com/packages/WebrootUnity)
+This module allows for easy access to the Webroot Unity API. Through this you can report on or change most items you can view in the console.
 
-> `Install-Module 'WebrootUnity'`
+<!-- Summary -->
 
-The Wiki has some great information on [how to get started](https://github.com/christaylorcodes/WebrootUnity/wiki/Getting-Started---Authentication) with the module.
+## [Install](https://www.powershellgallery.com/packages/WebrootUnity)
 
-See [WebrootUnity_Functions](WebrootUnity_Functions.md) for a list of commands available in this module.
+This section shows how to install/setup the code.
 
-Checkout the [Examples](https://github.com/christaylorcodes/WebrootUnity/tree/master/Examples) folder to see other ways to use the module.
+```powershell
+Install-Module WebrootUnity
+```
 
-## [Contributing](CONTRIBUTING.md)
+>If you are having issues accessing the PowerShell Gallery check out my [repair script](https://github.com/christaylorcodes/Initialize-PSGallery)
 
-If you use this project please give it a star and follow so you can get updated when new features are released. This also lets me know what projects are getting used and what ones I should dedicate more time to. If you want to get more involved please see the [contributing page](CONTRIBUTING.md). Projects need all kinds of help even if you don't know how to code.
+
+## [Contributing](https://github.com/christaylorcodes/GitHub-Template/blob/main/CONTRIBUTING.md)
+
+If you use this project please give it a star and follow so you can get updated when new features are released. This also lets me know what projects are getting used and what ones I should dedicate more time to. If you want to get more involved please see the [contributing page](https://github.com/christaylorcodes/GitHub-Template/blob/main/CONTRIBUTING.md). Projects need all kinds of help even if you don't know how to code.
 
 Want to share something you created using the module? Submit it to be featured as a Community Package.
 
-## [Donating](https://paypal.me/ChrisTaylorCodes)
+## [Donating](https://github.com/christaylorcodes/GitHub-Template/blob/main/DONATE.md)
 
-If you cant take time to contribute maybe you would like to help in other ways.
+If you cant take time to contribute maybe you would like to help another way.
 
 It takes time to maintain this project. Does the time spent on this module help you do cool things? Is that time worth a beer or two?
 
-[Donations](https://paypal.me/ChrisTaylorCodes) allow me to spend more time on this project and implement your feature requests.
-
-| BTC                                                                                                          | ETH                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| ![bc1qtfghmwqa6tshkpf03nsjlf40a6vahwg2n4vvqv](./Donate/BTC.png "bc1qtfghmwqa6tshkpf03nsjlf40a6vahwg2n4vvqv") | ![0x4aDC4F156D0A285ac9FB8C9Bd1513fe64FE35F1B](./Donate/ETH.png "0x4aDC4F156D0A285ac9FB8C9Bd1513fe64FE35F1B") |
-| `bc1qtfghmwqa6tshkpf03nsjlf40a6vahwg2n4vvqv`                                                                 | `0x4aDC4F156D0A285ac9FB8C9Bd1513fe64FE35F1B`                                                                 |
+Donations allow me to spend more time on this project and implement your feature requests.
