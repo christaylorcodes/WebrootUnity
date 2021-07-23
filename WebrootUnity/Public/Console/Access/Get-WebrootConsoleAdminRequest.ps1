@@ -12,7 +12,6 @@ function Get-WebrootConsoleAdminRequest {
 
     $url = "https://unityapi.webrootcloudav.com/service/api/console/access/gsm/$($GSMKey)/addadminstatus?userEmail=$($UserEmail)&confirmEmail=$($ConfirmEmail)"
 
-    Write-Verbose "Connecting"
     Connect-WebrootUnity
 
     try{
@@ -27,7 +26,6 @@ function Get-WebrootConsoleAdminRequest {
         }
     }
     catch{
-        Write-Error "Error: $($Error[0])"
+        Write-Error "Error: $($_)"
     }
-
 }

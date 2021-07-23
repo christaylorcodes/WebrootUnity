@@ -17,7 +17,7 @@ function Get-WebrootConsoleGSMSiteUserList {
         Invoke-RestMethod -Method Get -Uri $url -ContentType "application/json" -Headers @{"Authorization" = "Bearer $($WebrootAuthToken.access_token)"}
     }
     catch{
-        Write-Error "Error: $($Error[0])"
+        Write-Error "Error: $($_)"
     }
 
 }

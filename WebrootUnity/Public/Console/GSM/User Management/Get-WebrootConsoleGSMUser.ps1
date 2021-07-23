@@ -18,7 +18,7 @@ function Get-WebrootConsoleGSMUser {
         $Obj.Admins
     }
     catch{
-        Write-Error "Error: $($Error[0])"
+        Write-Error "Error: $($_)"
     }
 
 }

@@ -20,7 +20,7 @@ function Disable-WebrootConsoleGSMEndpoint {
         Invoke-RestMethod -Method Post -Uri $url -ContentType "application/json" -Body $Body -Headers @{"Authorization" = "Bearer $($WebrootAuthToken.access_token)"}
     }
     catch{
-        Write-Error "Error: $($Error[0])"
+        Write-Error "Error: $($_)"
     }
 
 }

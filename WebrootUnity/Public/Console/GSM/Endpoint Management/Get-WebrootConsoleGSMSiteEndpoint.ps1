@@ -20,7 +20,7 @@ function Get-WebrootConsoleGSMSiteEndpoint {
         $obj.Endpoints
     }
     catch{
-        Write-Error "Error: $($Error[0])"
+        Write-Error "Error: $($_)"
     }
 
 }

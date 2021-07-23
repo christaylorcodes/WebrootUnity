@@ -31,7 +31,7 @@ function Get-WebrootConsoleGSMGroupThreatList {
         }
     }
     catch{
-        Write-Error "Error: $($Error[0])"
+        Write-Error "Error: $($_)"
     }
 
 }

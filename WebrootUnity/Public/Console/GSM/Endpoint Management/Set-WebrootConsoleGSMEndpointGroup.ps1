@@ -1,4 +1,4 @@
-function Set-WebrootConsoleGSMEndpointGroup {
+function Set-WebrootConsoleGSMEndpointGroup{
     #https://unityapi.webrootcloudav.com/Docs/APIDoc/Api/PUT-api-console-gsm-gsmKey-sites-siteId-endpoints
     [CmdletBinding(SupportsShouldProcess, ConfirmImpact='Medium')]
     param(
@@ -10,33 +10,27 @@ function Set-WebrootConsoleGSMEndpointGroup {
         [string]$SourceGroupId,
         [Parameter(Mandatory=$True)]
         [string]$TargetGroupId,
-        [ValidateSet("Unchanged","All","Update")]
+        [ValidateSet("Unchanged","All")]
         [string]$Inheritance = "Unchanged"
     )
 
     $url = "https://unityapi.webrootcloudav.com/service/api/console/gsm/$($GSMKey)/sites/$($SiteID)/endpoints"
 
-    switch ($Inheritance){
-        'Unchanged'{$Inheritance = 0}
-        'All'{$Inheritance = 1}
-        'Update'{$Inheritance = 3}
+    $InheritanceInt = switch($Inheritance){
+        'Unchanged' { 0 }
+        'All'       { 1 }
     }
 
-    $Body = @{EndpointsList=$EndpointsList;
-                SourceGroupId=$SourceGroupId;
-                TargetGroupId=$TargetGroupId;
-                Inheritance=$Inheritance;}
+    $Body = @{
+        EndpointsList = $EndpointsList
+        SourceGroupId = $SourceGroupId
+        TargetGroupId = $TargetGroupId
+        Inheritance   = $InheritanceInt
+    }
     $Body = $Body | ConvertTo-Json
 
     if ($PSCmdlet.ShouldProcess($WebRequestArguments.URI, "Invoke-RestMethod, with body:`r`n$Body`r`n")) {
         Connect-WebrootUnity
-        Write-Verbose $Body
-
-        try{
-            Invoke-RestMethod -Method Put -Uri $url -ContentType "application/json" -Body $Body -Headers @{"Authorization" = "Bearer $($WebrootAuthToken.access_token)"}
-        }
-        catch{
-            Write-Error "Error: $($Error[0])"
-        }
+        Invoke-RestMethod -Method Put -Uri $url -ContentType "application/json" -Body $Body -Headers @{"Authorization" = "Bearer $($WebrootAuthToken.access_token)"}
     }
 }

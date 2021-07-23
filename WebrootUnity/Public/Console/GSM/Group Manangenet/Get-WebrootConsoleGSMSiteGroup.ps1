@@ -20,7 +20,7 @@ function Get-WebrootConsoleGSMSiteGroup {
         $obj.Groups
     }
     catch{
-        Write-Error "Error: $($Error[0])"
+        Write-Error "Error: $($_)"
     }
 
 }

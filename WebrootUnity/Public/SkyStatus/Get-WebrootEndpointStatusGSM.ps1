@@ -28,7 +28,7 @@ function Get-WebrootEndpointStatusGSM {
         }
     }
     catch{
-        Write-Error "Error: $($Error[0])"
+        Write-Error "Error: $($_)"
     }
 
 }

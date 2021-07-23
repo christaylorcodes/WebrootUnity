@@ -1,4 +1,4 @@
-function Get-WebrootKeycodeUsageGSM {
+function Get-WebrootKeycodeUsage {
     #https://unityapi.webrootcloudav.com/Docs/APIDoc/Api/GET-api-usage-site-keyCode_billingDate_continuation
     [CmdletBinding()]
     param(
@@ -26,7 +26,6 @@ function Get-WebrootKeycodeUsageGSM {
         }
     }
     catch{
-        Write-Error "Error: $($Error[0])"
+        Write-Error "Error: $($_)"
     }
-
 }

@@ -30,7 +30,7 @@ function Get-WebrootConsoleGSMThreatList {
         }
     }
     catch{
-        Write-Error "Error: $($Error[0])"
+        Write-Error "Error: $($_)"
     }
 
 }

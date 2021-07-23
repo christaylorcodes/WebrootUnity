@@ -10,6 +10,6 @@ function Get-WebrootHealthCheckPing {
         Write-Output 'Success'
     }
     catch{
-        Write-Error "Error: $($Error[0])"
+        Write-Error "Error: $($_)"
     }
 }

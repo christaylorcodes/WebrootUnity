@@ -1,11 +1,11 @@
 ---
 external help file: WebrootUnity-help.xml
 Module Name: WebrootUnity
-online version:
+online version: https://unityapi.webrootcloudav.com/Docs/en/APIDoc/GettingStarted#gettingStarted-acquireCredentials
 schema: 2.0.0
 ---
 
-# Get-WebrootKeycodeUsageGSM
+# Get-WebrootKeycodeUsage
 
 ## SYNOPSIS
 {{ Fill in the Synopsis }}
@@ -13,7 +13,7 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-Get-WebrootKeycodeUsageGSM [-KeyCode] <Object> [[-billingDate] <Object>] [[-continuation] <Object>] [-All]
+Get-WebrootKeycodeUsage [-KeyCode] <Object> [[-billingDate] <Object>] [[-continuation] <Object>] [-All]
  [<CommonParameters>]
 ```
 

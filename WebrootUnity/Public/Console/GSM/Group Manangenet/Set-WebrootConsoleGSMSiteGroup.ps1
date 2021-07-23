@@ -37,7 +37,7 @@ function Set-WebrootConsoleGSMSiteGroup {
             Invoke-RestMethod -Method Put -Uri $url -ContentType "application/json" -Body $Body -Headers @{"Authorization" = "Bearer $($WebrootAuthToken.access_token)"}
         }
         catch{
-            Write-Error "Error: $($Error[0])"
+            Write-Error "Error: $($_)"
         }
     }
 }
