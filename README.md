@@ -15,14 +15,14 @@ PowerShell wrapper for the [Webroot Unity REST API](https://unityapi.webrootclou
 <div align="center">
 
 [![Build status](https://ci.appveyor.com/api/projects/status/so4anml73ut5cjnp?svg=true)](https://ci.appveyor.com/project/christaylorcodes/webrootunity)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/5a6a2b309d3c4e71a1ef28021fcd58f3)](https://www.codacy.com/manual/christaylorcodes/WebrootUnity?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=christaylorcodes/WebrootUnity&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/5a6a2b309d3c4e71a1ef28021fcd58f3)](https://www.codacy.com/gh/christaylorcodes/WebrootUnity/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=christaylorcodes/WebrootUnity&amp;utm_campaign=Badge_Grade)
 [![Gallery](https://img.shields.io/powershellgallery/v/WebrootUnity?label=PS%20Gallery&logo=powershell&logoColor=white)](https://www.powershellgallery.com/packages/WebrootUnity)
 [![Donate](https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&amp;style=flat)](https://github.com/christaylorcodes/GitHub-Template/blob/main/DONATE.md)
 
 </div>
 <p align="center">
     <a href="WebrootUnity_Functions.md">List of Functions</a> •
-    <a href="#examples">Examples</a> •
+    <a href="https://github.com/christaylorcodes/WebrootUnity/tree/master/Examples">Examples</a> •
     <a href="#install">Install</a> •
     <a href="https://github.com/christaylorcodes/GitHub-Template/blob/main/CONTRIBUTING.md">Contribute</a> •
     <a href="https://github.com/christaylorcodes/GitHub-Template/blob/main/CONTRIBUTING.md#reporting-bugs">Submit a Bug</a> •
