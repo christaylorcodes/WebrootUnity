@@ -31,7 +31,7 @@ PowerShell wrapper for the [Webroot Unity REST API](https://unityapi.webrootclou
 
 <!-- Summary -->
 
-This module allows for easy access to the Webroot Unity API. Through this you can report on or change most items you can view in the console.
+This module allows for easy access to the [Webroot Unity REST API](https://unityapi.webrootcloudav.com/Docs/en/APIDoc). Through this you can report on or change most items you can view in the console.
 
 <!-- Summary -->
 
@@ -45,6 +45,7 @@ Install-Module WebrootUnity
 
 >If you are having issues accessing the PowerShell Gallery check out my [repair script](https://github.com/christaylorcodes/Initialize-PSGallery)
 
+Refer to the [Getting Started](https://github.com/christaylorcodes/WebrootUnity/wiki/Getting-Started) wiki page for authentication information.
 
 ## [Contributing](https://github.com/christaylorcodes/GitHub-Template/blob/main/CONTRIBUTING.md)
 

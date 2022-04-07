@@ -15,7 +15,8 @@ schema: 2.0.0
 ```
 New-WebrootConsoleGSMSite [-GSMKey] <String> [-SiteName] <String> [-Seats] <Int32> [-Comments] <String>
  [[-BillingCycle] <String>] [[-BillingDate] <String>] [-GlobalPolicies] [-GlobalOverrides]
- [[-PolicyId] <String>] [-Emails] <String> [-Trial] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [[-PolicyId] <String>] [-Emails] <String> [-Trial] [-Modules <Hashtable[]>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -221,6 +222,21 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Modules
+{{ Fill Modules Description }}
+
+```yaml
+Type: Hashtable[]
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
