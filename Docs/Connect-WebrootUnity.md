@@ -15,12 +15,12 @@ This will connect you to the Webroot Unity API.
 ### New
 ```
 Connect-WebrootUnity [-client_id] <String> [-client_secret] <String> -credentials <PSCredential>
- [[-scope] <String>] [-force] [<CommonParameters>]
+ [[-scope] <String>] [-force] [-RenewBuffer <Object>] [<CommonParameters>]
 ```
 
 ### ReNew
 ```
-Connect-WebrootUnity [[-scope] <String>] [-force] [<CommonParameters>]
+Connect-WebrootUnity [[-scope] <String>] [-force] [-RenewBuffer <Object>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -106,6 +106,21 @@ Parameter Sets: New
 Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RenewBuffer
+{{ Fill RenewBuffer Description }}
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
