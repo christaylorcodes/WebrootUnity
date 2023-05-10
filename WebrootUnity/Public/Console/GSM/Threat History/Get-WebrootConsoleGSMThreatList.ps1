@@ -2,9 +2,9 @@ function Get-WebrootConsoleGSMThreatList {
     #https://unityapi.webrootcloudav.com/Docs/APIDoc/Api/GET-api-console-gsm-gsmKey-sites-siteId-threathistory_startDate_endDate_returnedInfo_pageSize_pageNr
     [CmdletBinding()]
     param(
-        [Parameter(Mandatory=$True)]
+        [Parameter(Mandatory = $True)]
         [string]$GSMKey,
-        [Parameter(Mandatory=$True)]
+        [Parameter(Mandatory = $True)]
         [string]$SiteID,
         [datetime]$startDate,
         [datetime]$endDate,
@@ -16,20 +16,21 @@ function Get-WebrootConsoleGSMThreatList {
 
     $url = "https://unityapi.webrootcloudav.com/service/api/console/gsm/$($GSMKey)/sites/$($SiteID)/threathistory?startDate=$($startDate)&endDate=$($endDate)&returnedInfo=$($returnedInfo)&pageSize=$($pageSize)&pageNr=$($pageNr)"
 
-    Write-Verbose "Connecting"
+
     Connect-WebrootUnity
 
-    try{
-        $Obj = Invoke-RestMethod -Method Get -Uri $url -ContentType "application/json" -Headers @{"Authorization" = "Bearer $($WebrootAuthToken.access_token)"}
+    try {
+        $Obj = Invoke-RestMethod -Method Get -Uri $url -ContentType 'application/json' -Headers @{'Authorization' = "Bearer $($WebrootAuthToken.access_token)" }
         $Obj.ThreatRecords
-        while($All -and ($($Obj.TotalAvailable) -gt ($Obj.PageNr * $Obj.PageSize))){
+        while ($All -and ($($Obj.TotalAvailable) -gt ($Obj.PageNr * $Obj.PageSize))) {
+            Connect-WebrootUnity
             $pageNr ++
             $url = "https://unityapi.webrootcloudav.com/service/api/console/gsm/$($GSMKey)/sites/$($SiteID)/threathistory?startDate=$($startDate)&endDate=$($endDate)&returnedInfo=$($returnedInfo)&pageSize=$($pageSize)&pageNr=$($pageNr)"
-            $Obj = Invoke-RestMethod -Method Get -Uri $url -ContentType "application/json" -Headers @{"Authorization" = "Bearer $($WebrootAuthToken.access_token)"}
+            $Obj = Invoke-RestMethod -Method Get -Uri $url -ContentType 'application/json' -Headers @{'Authorization' = "Bearer $($WebrootAuthToken.access_token)" }
             $Obj.ThreatRecords
         }
     }
-    catch{
+    catch {
         Write-Error "Error: $($_)"
     }
 

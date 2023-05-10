@@ -8,7 +8,7 @@ function Get-WebrootConsoleGSMSiteList {
 
     $url = "https://unityapi.webrootcloudav.com/service/api/console/gsm/$($GSMKey)/sites"
 
-    Write-Verbose "Connecting"
+
     Connect-WebrootUnity
 
     try{

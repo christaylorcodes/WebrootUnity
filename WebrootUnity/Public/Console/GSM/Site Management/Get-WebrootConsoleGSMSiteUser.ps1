@@ -12,7 +12,7 @@ function Get-WebrootConsoleGSMSiteUser {
 
     $url = "https://unityapi.webrootcloudav.com/service/api/console/gsm/$($GSMKey)/sites/$($SiteID)/admins/$($UserID)"
 
-    Write-Verbose "Connecting"
+
     Connect-WebrootUnity
 
     try{

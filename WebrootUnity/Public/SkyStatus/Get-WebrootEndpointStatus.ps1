@@ -14,7 +14,7 @@ function Get-WebrootEndpointStatus {
 
     $url = "https://unityapi.webrootcloudav.com/service/api/status/site/$($keyCode)?machineId=$($machineId)&returnedInfo=$($returnedInfo)&modifiedSince=$($modifiedSince)&batchSize=$($batchSize)&continuation=$($continuation)"
 
-    Write-Verbose "Connecting"
+
     Connect-WebrootUnity
 
     try{

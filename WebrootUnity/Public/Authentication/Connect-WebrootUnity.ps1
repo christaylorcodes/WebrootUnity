@@ -16,17 +16,17 @@
         $RenewBuffer = 10
     )
 
-    #Check that needed functions are loaded
+    Write-Verbose 'Connecting'
 
     #Config file to save token info to
     $configDir = "$Env:AppData\WindowsPowerShell\Modules\WebrootUnity\0.1\Config.ps1xml"
 
-    #If paramater was passed use as new token request
+    #If parameter was passed use as new token request
     if ($PSCmdlet.ParameterSetName -eq 'New') {
-        Write-Verbose 'Paramaters passed, creating new request.'
+        Write-Verbose 'Parameters passed, creating new request.'
         Get-WebrootAuthToken -client_id $client_id -client_secret $client_secret -credentials $credentials -scope $scope
     }
-    #No paramaters where passed use variable or config.
+    #No parameters where passed use variable or config.
     else {
         #If there is no variable but a config file load
         if (!$WebrootAuthToken -and (Test-Path $configDir) -and !$Force) {

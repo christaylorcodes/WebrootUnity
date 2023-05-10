@@ -31,8 +31,7 @@ function Set-WebrootConsoleGSMSiteUser {
 
     $Body = @{
         Admins = $List
-    }
-    $Body = $Body | ConvertTo-Json
+    } | ConvertTo-Json
     <#
     $List = $(($List | ConvertTo-Json).trim('[]'))
     $Body = @"

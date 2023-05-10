@@ -12,7 +12,7 @@ function Get-WebrootConsoleGSMSitePolicy {
 
     $url = "https://unityapi.webrootcloudav.com/service/api/console/gsm/$($GSMKey)/sites/$($SiteID)/policies/$($PolicyID)"
 
-    Write-Verbose "Connecting"
+
     Connect-WebrootUnity
 
     try{

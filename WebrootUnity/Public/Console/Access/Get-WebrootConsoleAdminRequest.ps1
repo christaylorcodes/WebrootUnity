@@ -2,11 +2,11 @@ function Get-WebrootConsoleAdminRequest {
     #https://unityapi.webrootcloudav.com/Docs/APIDoc/Api/GET-api-console-access-gsm-gsmKey-addadminstatus_userEmail_confirmEmail
     [CmdletBinding()]
     param(
-        [Parameter(Mandatory=$True)]
+        [Parameter(Mandatory = $True)]
         $GSMKey,
-        [Parameter(Mandatory=$True)]
+        [Parameter(Mandatory = $True)]
         $UserEmail,
-        [Parameter(Mandatory=$True)]
+        [Parameter(Mandatory = $True)]
         $ConfirmEmail
     )
 
@@ -14,18 +14,18 @@ function Get-WebrootConsoleAdminRequest {
 
     Connect-WebrootUnity
 
-    try{
-        $obj = Invoke-RestMethod -Method Get -Uri $url -ContentType "application/json" -Headers @{"Authorization" = "Bearer $($WebrootAuthToken.access_token)"}
+    try {
+        $obj = Invoke-RestMethod -Method Get -Uri $url -ContentType 'application/json' -Headers @{'Authorization' = "Bearer $($WebrootAuthToken.access_token)" }
         $Obj.QueryResults
-        if($All){
-            while($Obj.ContinuationURI){
+        if ($All) {
+            while ($Obj.ContinuationURI) {
                 Connect-WebrootUnity
-                $Obj = Invoke-RestMethod -Method Get -uri $Obj.ContinuationURI -ContentType "application/json" -Headers @{"Authorization" = "Bearer $($WebrootAuthToken.access_token)"}
+                $Obj = Invoke-RestMethod -Method Get -Uri $Obj.ContinuationURI -ContentType 'application/json' -Headers @{'Authorization' = "Bearer $($WebrootAuthToken.access_token)" }
                 $Obj.QueryResults
             }
         }
     }
-    catch{
+    catch {
         Write-Error "Error: $($_)"
     }
 }

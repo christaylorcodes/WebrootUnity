@@ -13,7 +13,7 @@ function Get-WebrootEndpointStatusGSM {
 
     $url = "https://unityapi.webrootcloudav.com/service/api/status/gsm/$($KeyCode)?machineId=$($machineId)&returnedInfo=$($returnedInfo)&modifiedSince=$($modifiedSince)&batchSize=$($batchSize)&continuation=$($continuation)"
 
-    Write-Verbose "Connecting"
+
     Connect-WebrootUnity
 
     try{
