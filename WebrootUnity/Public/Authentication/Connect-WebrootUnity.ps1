@@ -42,7 +42,7 @@
         }
 
         #Create or Renew the Token if it has expired or does not exist or forced
-        if ($WebrootAuthToken.expires -lt (Get-Date).AddSeconds( - [Math]::Abs($RenewBuffer)) -or !$WebrootAuthToken -or $Force) {
+        if ($WebrootAuthToken.expires -le (Get-Date).AddSeconds([Math]::Abs($RenewBuffer)) -or !$WebrootAuthToken -or $Force) {
             #If it can be renewed and not forced do so
             if ($WebrootAuthToken.Renewable -gt (Get-Date) -and !$Force) {
                 Update-WebrootAuthToken -client_id $WebrootAuthToken.client_id -client_secret $WebrootAuthToken.client_secret -refresh_token $WebrootAuthToken.refresh_token
